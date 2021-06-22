@@ -5,7 +5,7 @@ const passport = require('passport')
 
 //get comments array
 router.get('/comments', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user.items)
+  res.json(req.user.comments)
 })
 
 //create comment
@@ -26,6 +26,6 @@ router.put('/comments/:id', passport.authenticate('jwt'), (req, res) => Comment.
 router.delete('/comments/:id', passport.authenticate('jwt'), (req, res) => Comment.destroy({ where: { id: req.params.id } })
   .then(() => res.sendStatus(200))
   .catch(err => console.log(err)))
-  
+
 //export routes
 module.exports = router

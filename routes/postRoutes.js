@@ -4,16 +4,18 @@ const passport = require('passport')
 //all of these routes require the user to be authenticated
 //led with the /api route
 
-//get posts
-router.get('/posts', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user)
+//get all posts from all users
+router.get('/posts', passport.authenticate('jwt'), (req, res) => Post.findAll({
+  include: [Comment]
 })
+  .then(posts => res.json(posts))
+  .catch(err => console.log(err)))
 
 //create post
-router.post('/posts', passport.authenticate('jwt'), (req, res) => Post.create({
+router.post('posts', passport.authenticate('jwt'), (req, res) => Post.create({
   //true for request, false for an offer
   type: req.body.type,
-  imgUrl: req.body.imgUrl,
+  imgURL: req.body.imgURL,
   body: req.body.body,
   contactEmail: req.body.contactEmail,
   contactNumber: req.body.contactNumber,
