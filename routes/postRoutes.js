@@ -15,7 +15,8 @@ router.post('posts', passport.authenticate('jwt'), (req, res) => Post.create({
   imgURL: req.body.imgURL,
   body: req.body.body,
   contactEmail: req.body.contactEmail,
-  contactNumber: req.body.contactNumber
+  contactNumber: req.body.contactNumber,
+  uid: req.user.id
 })
   .then(post => res.json(post))
   .catch(err => console.log(err)))
