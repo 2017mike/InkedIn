@@ -6,7 +6,7 @@ const passport = require('passport')
 
 //get posts
 router.get('/posts', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user.posts)
+  res.json(req.user)
 })
 
 //create post
