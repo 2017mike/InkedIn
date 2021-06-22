@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- <nav class='navbar-fixed indigo' id="navbarStick">
+  <div class="nav-wrapper">
+    <a href="./index.html" class="brand-logo center"><img src="../assets/inkedinlogo.png" alt="inkedInlogo"></a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+     
+     
+      
+      <li><a href="./index.html"><i class="material-icons left">audiotrack</i>Home</a></li>
+      <li><a href="./develop/definitions.html"><i class="material-icons left">school</i>Dictionary</a></li>
+      <li><a href="./develop/about.html"><i class="material-icons left">group</i>About Us</a></li>
+    </ul>
+  </div>
+</nav> -->
+<!-- sidenavbar media responsive-->
+<!-- <ul class="sidenav" id="mobile-demo">
+  <li><a href="./index.html" class='waves-effect'><i class="material-icons left">audiotrack</i>Home</a></li>
+  <li><a href="./develop/definitions.html" class='waves-effect'><i class="material-icons left">school</i>Dictionary</a>
+  <li><a href="./develop/about.html"><i class="material-icons left">group</i>About Us</a></li>
+  <div class="row"></div>
+  <li><a href="#mainSearch"><i class="material-icons left">search</i>Search</a></li>
+  <li><a href="#B"><i class="material-icons left">face</i>Artist</a></li>
+  <li><a href="#D"><i class="material-icons left">queue_music</i>Lyrics</a></li>
+  <li><a href="#C"><i class="material-icons left">library_books</i>Definitions</a></li>
+</ul> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<nav class="red" style="padding:0px ; position: fixed;">
+  <div class="nav-wrapper indigo">
+    <a href="#" class="brand-logo center"><img src="../assets/inkedinlogo.png" alt=""></a>
+
+    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <ul class="right hide-on-med-and-down ">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Offering</a></li>
+      <li><a href="#">Requests</a></li>
+      <li><a href="#">About</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+<ul class="sidenav" id="mobile-nav">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Offering</a></li>
+  <li><a href="#">Requests</a></li>
+  <li><a href="#">About</a></li>
+
+</ul>
+
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+
+
+
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col m4">
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://static.wikia.nocookie.net/topstrongest/images/1/19/Images%281%29.jpg/revision/latest?cb=20180425164546">
+            <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Offer</span>
+          </div>
+
+          <div class="card-action center-align ">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m4">
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://numpaint.com/wp-content/uploads/2020/08/yuno-gasai-future-diary-series-paint-by-numbers.jpg">
+            <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Request</span>
+          </div>
+
+          <div class="card-action center-align">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col m4">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
+            <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Offer</span>
+          </div>
+
+          <div class="card-action center-align">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+<script> src= 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'</script>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+  <script>
+
+  // start of functions/ initiators for materialize to work for our pages
+  //for side nav to work
+  document.addEventListener('DOMContentLoaded', function () {
+    var elem = document.querySelector('.sidenav');
+    var instance = new M.Sidenav(elem);
+  });
+  //materialize auto intiation
+  M.AutoInit();
+
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () { myFunction() };
+
+  // Get the header
+  var header = document.getElementById("navbarStick");
+
+  // Get the offset position of the navbar
+  var sticky = header.offsetTop;
+
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+
+  </script>
+
+
+</body>
+
+</html>
