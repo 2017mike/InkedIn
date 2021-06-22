@@ -6,13 +6,14 @@ const passport = require('passport')
 
 //get posts
 router.get('/posts', passport.authenticate('jwt'), (req, res) => {
-  res.json(req.user.items)
+  res.json(req.user.posts)
 })
 
 //create post
-router.post('posts', passport.authenticate('jwt'), (req, res) => Post.create({
+router.post('/posts', passport.authenticate('jwt'), (req, res) => Post.create({
+  //true for request, false for an offer
   type: req.body.type,
-  imgURL: req.body.imgURL,
+  imgUrl: req.body.imgUrl,
   body: req.body.body,
   contactEmail: req.body.contactEmail,
   contactNumber: req.body.contactNumber,

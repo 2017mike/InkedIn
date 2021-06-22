@@ -6,7 +6,7 @@ class Post extends Model { }
 Post.init({
   //true for request, false its an offer
   type: DataTypes.BOOLEAN,
-  imgURL: DataTypes.STRING,
+  imgUrl: DataTypes.STRING,
   body: DataTypes.STRING,
   contactEmail: DataTypes.STRING,
   contactNumber: DataTypes.STRING
