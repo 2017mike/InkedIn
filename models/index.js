@@ -1,5 +1,11 @@
 const User = require('./User.js')
+const Comment = require('./Comment.js')
+const Post = require('./Post.js')
+//bring in db models
 
-// your relationships go here...
+// 1 User has many comments and posts
+User.hasMany(Comment, {foreignKey: 'uid'})
+User.hasMany(Post, {foreignKey: 'uid'})
 
-module.exports = { User }
+
+module.exports = { User, Comment, Post }
