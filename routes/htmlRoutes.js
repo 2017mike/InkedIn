@@ -21,5 +21,11 @@ router.get('/post', (req, res) => {
 })
 
 
+router.get('/home', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'home.html'))
+})
+
+
+
 //export routes
 module.exports = router
