@@ -13,11 +13,6 @@ router.get('/register', (req, res) => {
 })
 
 
-//sends to the sends to the post page
-router.get('/home', (req, res) => {
-  res.sendFile(join(__dirname, '..', 'public', 'home.html'))
-})
-
 //sends user to their profile page
 router.get('/profile', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'profile.html'))
@@ -32,6 +27,16 @@ router.get('/post', (req, res) => {
 router.get('/create', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'create.html'))
 })
+
+router.get('/post', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'post.html'))
+})
+
+
+router.get('/home', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'home.html'))
+})
+
 
 
 //export routes

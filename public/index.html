@@ -15,7 +15,7 @@
   <style>
     body {
       font-family: 'Benne', serif;
-      background-color: darkgray;
+      background-color: ghostwhite;
 
     }
   </style>
@@ -28,34 +28,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-  <nav class="red" style="padding:0px ; position: fixed;">
-    <div class="nav-wrapper black">
-      <a href="#" class="brand-logo center"> InkedIn</a>
-
-      <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-        <i class="material-icons">menu</i>
-      </a>
-
-      <ul class="right hide-on-med-and-down ">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Offering</a></li>
-        <li><a href="#">Requests</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#" id="sign out">Sign Out</a></li>
-
-      </ul>
-    </div>
-  </nav>
-
-
-  <ul class="sidenav" id="mobile-nav">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Offering</a></li>
-    <li><a href="#">Requests</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Sign Out</a></li>
-
-  </ul>
+  
 
   <div class="row"></div>
   <div class="row"></div>
@@ -66,6 +39,67 @@
 
 
   <div class="container">
+
+
+<main>
+
+  <!-- <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" /> -->
+  <!-- <div class="section"></div> -->
+
+  <h5 class="indigo-text">Please login into your account</h5>
+  <!-- <div class="section"></div> -->
+
+
+  <div class="z-depth-1 grey lighten-4 row"
+    style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+
+    <form class="col s12" method="post">
+      <div class='row'>
+        <div class='col s12'>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='input-field col s12'>
+          <input class='validate'  name='email' id='username' />
+          <label for='email'>Enter your username</label>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='input-field col s12'>
+          <input class='validate' type='password' name='password' id='password' />
+          <label for='password'>Enter your password</label>
+        </div>
+
+      </div>
+
+      <br />
+      <center>
+        <div class='row'>
+          <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'
+            id='login'>Login</button>
+          <div class='col s12'></div>
+          <div class='col s12'></div>
+          <div class='col s12'></div>
+          <div class='col s12'></div>
+          <div class='col s12'></div>
+          <a type='submit' name='btn_login' class='col s12 btn btn-large waves-effect #4caf50 green' id='register'
+            href="/register.html">Create Account</a>
+
+
+
+        </div>
+      </center>
+    </form>
+  </div>
+  </div>
+
+
+
+  <div class="section"></div>
+  <div class="section"></div>
+</main>
 
 
 
@@ -79,6 +113,7 @@
   <script> src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
 
@@ -87,78 +122,97 @@
 
   <script>
 
-    // start of functions/ initiators for materialize to work for our pages
-    //for side nav to work
-    document.addEventListener('DOMContentLoaded', function () {
-      var elem = document.querySelector('.sidenav');
-      var instance = new M.Sidenav(elem);
-    });
-    //materialize auto intiation
-    M.AutoInit();
+    // // start of functions/ initiators for materialize to work for our pages
+    // //for side nav to work
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   var elem = document.querySelector('.sidenav');
+    //   var instance = new M.Sidenav(elem);
+    // });
+    // //materialize auto intiation
+    // M.AutoInit();
 
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function () { myFunction() };
+    // // When the user scrolls the page, execute myFunction
+    // window.onscroll = function () { myFunction() };
 
-    // Get the header
-    var header = document.getElementById("navbarStick");
+    // // Get the header
+    // var header = document.getElementById("navbarStick");
 
-    // Get the offset position of the navbar
-    var sticky = header.offsetTop;
+    // // Get the offset position of the navbar
+    // var sticky = header.offsetTop;
 
-    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
+    // // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    // function myFunction() {
+    //   if (window.pageYOffset > sticky) {
+    //     header.classList.add("sticky");
+    //   } else {
+    //     header.classList.remove("sticky");
+    //   }
+    // }
 
     //route functions
 
-    document.getElementById('signOut').addEventListener('click', event => {
-        localStorage.removeItem('token')
-        window.location = '/login.html'
-      })
-
-      document.getElementById('addPost').addEventListener('click', event => {
+    document.getElementById('login').addEventListener('click', event => {
         event.preventDefault()
-        axios.post('/api/items', {
-          text: document.getElementById('text').value,
-          isDone: false
-        }, {
-          headers: {
-            'Authorization': `Bearer ${localStorage.getItem('token')}`
-          }
+        axios.post('/api/users/login', {
+          username: document.getElementById('username').value,
+          password: document.getElementById('password').value
         })
-          .then(({ data: item }) => {
-            const itemElem = document.createElement('li')
-            itemElem.innerHTML = `
-          <p>Text: ${item.text}</p>
-          <p>isDone: ${item.isDone}</p>
-          `
-            document.getElementById('items').append(itemElem)
+          .then(({ data: token }) => {
+            if (token) {
+              localStorage.setItem('token', token)
+              window.location = '/home'
+            } else {
+              alert('Invalid username or password')
+            }
           })
-          .catch(err => window.location = '/login.html')
+          .catch(err => console.error(err))
       })
 
-      axios.get('/api/items', {
-        headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
-        }
-      })
-        .then(({ data: items }) => {
-          items.forEach(item => {
-            const itemElem = document.createElement('li')
-            itemElem.innerHTML = `
-          <p>Text: ${item.text}</p>
-          <p>isDone: ${item.isDone}</p>
-          `
-            document.getElementById('items').append(itemElem)
-          })
 
-        })
-        .catch(err => window.location = '/login.html')
+      
+    // document.getElementById('signOut').addEventListener('click', event => {
+    //     localStorage.removeItem('token')
+    //     window.location = '/login.html'
+    //   })
+
+    //   document.getElementById('addPost').addEventListener('click', event => {
+    //     event.preventDefault()
+    //     axios.post('/api/items', {
+    //       text: document.getElementById('text').value,
+    //       isDone: false
+    //     }, {
+    //       headers: {
+    //         'Authorization': `Bearer ${localStorage.getItem('token')}`
+    //       }
+    //     })
+    //       .then(({ data: item }) => {
+    //         const itemElem = document.createElement('li')
+    //         itemElem.innerHTML = `
+    //       <p>Text: ${item.text}</p>
+    //       <p>isDone: ${item.isDone}</p>
+    //       `
+    //         document.getElementById('items').append(itemElem)
+    //       })
+    //       .catch(err => window.location = '/login.html')
+    //   })
+
+    //   axios.get('/api/items', {
+    //     headers: {
+    //       'Authorization': `Bearer ${localStorage.getItem('token')}`
+    //     }
+    //   })
+    //     .then(({ data: items }) => {
+    //       items.forEach(item => {
+    //         const itemElem = document.createElement('li')
+    //         itemElem.innerHTML = `
+    //       <p>Text: ${item.text}</p>
+    //       <p>isDone: ${item.isDone}</p>
+    //       `
+    //         document.getElementById('items').append(itemElem)
+    //       })
+
+    //     })
+    //     .catch(err => window.location = '/login.html')
 
   </script>
 
