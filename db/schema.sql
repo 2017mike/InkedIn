@@ -3,3 +3,5 @@ DROP DATABASE IF EXISTS inkedin_db;
 
 -- CREATE DATABASE
 CREATE DATABASE inkedin_db;
+
+
