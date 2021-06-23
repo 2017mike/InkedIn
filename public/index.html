@@ -65,6 +65,8 @@
   <div class="container">
 
 
+
+
     
 
 
@@ -116,7 +118,7 @@
         window.location = '/login.html'
       })
 
-      document.getElementById('addItem').addEventListener('click', event => {
+      document.getElementById('addPost').addEventListener('click', event => {
         event.preventDefault()
         axios.post('/api/items', {
           text: document.getElementById('text').value,
