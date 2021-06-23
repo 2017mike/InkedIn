@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <style>
+    body {
+        font-family: 'Benne', serif;
+        background-color: darkgray;
+        
+      }
+  </style>
+
+
+</head>
+
+<body>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<nav class="red" style="padding:0px ; position: fixed;">
+  <div class="nav-wrapper black">
+    <a href="#" class="brand-logo center"> InkedIn</a>
+
+    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+      <i class="material-icons">menu</i>
+    </a>
+
+    <ul class="right hide-on-med-and-down ">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Offering</a></li>
+      <li><a href="#">Requests</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Sign Out</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+
+<ul class="sidenav" id="mobile-nav">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Offering</a></li>
+  <li><a href="#">Requests</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Sign Out</a></li>
+
+</ul>
+
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+
+
+
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col m4">
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://static.wikia.nocookie.net/topstrongest/images/1/19/Images%281%29.jpg/revision/latest?cb=20180425164546">
+            <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Offer</span>
+          </div>
+
+          <div class="card-action center-align ">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m4">
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://numpaint.com/wp-content/uploads/2020/08/yuno-gasai-future-diary-series-paint-by-numbers.jpg">
+            <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Request</span>
+          </div>
+
+          <div class="card-action center-align">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col m4">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
+            <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Offer</span>
+          </div>
+
+          <div class="card-action center-align">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+<script> src= 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+  <script>
+
+  document.getElementById('signOut').addEventListener('click', event => {
+    localStorage.removeItem('token')
+    window.location = '/login.html'
+  })
+
+  document.getElementById('addItem').addEventListener('click', event => {
+    event.preventDefault()
+    axios.post('/api/items', {
+      text: document.getElementById('text').value,
+      isDone: false
+    }, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+      .then(({ data: item }) => {
+        const itemElem = document.createElement('li')
+        itemElem.innerHTML = `
+          <p>Text: ${item.text}</p>
+          <p>isDone: ${item.isDone}</p>
+          `
+        document.getElementById('items').append(itemElem)
+      })
+      .catch(err => window.location = '/login.html')
+  })
+
+  axios.get('/api/items', {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+  })
+    .then(({ data: items }) => {
+      items.forEach(item => {
+        const itemElem = document.createElement('li')
+        itemElem.innerHTML = `
+          <p>Text: ${item.text}</p>
+          <p>isDone: ${item.isDone}</p>
+          `
+        document.getElementById('items').append(itemElem)
+      })
+
+    })
+    .catch(err => window.location = '/login.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // start of functions/ initiators for materialize to work for our pages
+  //for side nav to work
+  document.addEventListener('DOMContentLoaded', function () {
+    var elem = document.querySelector('.sidenav');
+    var instance = new M.Sidenav(elem);
+  });
+  //materialize auto intiation
+  M.AutoInit();
+
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () { myFunction() };
+
+  // Get the header
+  var header = document.getElementById("navbarStick");
+
+  // Get the offset position of the navbar
+  var sticky = header.offsetTop;
+
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+
+  </script>
+
+
+</body>
+
+</html>
