@@ -6,6 +6,7 @@ const Post = require('./Post.js')
 // 1 User has many comments and posts
 User.hasMany(Comment, {foreignKey: 'uid'})
 User.hasMany(Post, {foreignKey: 'uid'})
-
+//1 Post also has many comments
+Post.hasMany(Comment, { foreignKey: 'pid' })
 
 module.exports = { User, Comment, Post }
