@@ -11,6 +11,10 @@ router.get('/register', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'register.html'))
 })
 
+router.get('/post', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'post.html'))
+})
+
 
 //export routes
 module.exports = router
