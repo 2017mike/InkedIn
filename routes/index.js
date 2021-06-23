@@ -1,6 +1,9 @@
 const router = require('express').Router()
 
+//bring in routes for exporting
 router.use('/api', require('./userRoutes.js'))
-// other routers go here...
+router.use('/', require('./htmlRoutes'))
+router.use('/api', require('./postRoutes'))
+router.use('/api', require('./commentRoutes'))
 
 module.exports = router
