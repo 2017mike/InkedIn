@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Post } = require('../models')
+const { Post, Comment } = require('../models')
 const passport = require('passport')
 //all of these routes require the user to be authenticated
 //led with the /api route
