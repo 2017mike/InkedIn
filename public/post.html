@@ -83,21 +83,16 @@
         var elems = document.querySelectorAll('select');
         var instances = M.FormSelect.init(elems, options);
       });
-
-
   document.getElementById('addPost').addEventListener('click', event => {
     event.preventDefault()
     axios.post('/api/posts', {
 
-      type: document.getElementById('text').value,
-      imgURL: 
-      body: 
-      contactEmail:
-      contactNumber:
-      
-
-
-    }, {
+    //   type: document.getElementById('text').value,
+    //   imgURL: 
+    //   body: 
+    //   contactEmail:
+    //   contactNumber:
+    // }, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
@@ -106,16 +101,11 @@
         const itemElem = document.createElement('li')
         itemElem.innerHTML = `
       <p>Text: your post has been created! :)</p>
-
-`
+  `
         document.getElementById('items').append(itemElem)
       })
       .catch(err => window.location = '/login.html')
-  })
-
-
-
-      
+  })   
   </script>
 </body>
 </html>
