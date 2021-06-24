@@ -52,8 +52,8 @@ We need a empty div that will be populated with cards through javascript -->
     <li><a href="mobile.html">Mobile</a></li>
   </ul>
   <div class="container">
-    <div class="row">
-      <div class="col s4">
+    <div class="row" id="renderCards">
+      <!-- <div class="col s4">
         <div class="card">
           <div class="card-image waves-effect">
             <img class= 'activator' src="https://static.wikia.nocookie.net/topstrongest/images/1/19/Images%281%29.jpg/revision/latest?cb=20180425164546">
@@ -117,16 +117,15 @@ We need a empty div that will be populated with cards through javascript -->
               src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-     document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, options);
-      });
-  </script>
+  <!-- js for rendering homepage -->
+  <script src="./assets/js/homePage.js"></script>
 </body>
 
 </html>
