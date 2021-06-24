@@ -8,7 +8,12 @@ const renderPosts = () => {
     }
   })
   .then(({ data }) => {
-    console.log(data)
+    // console.log(data)
+    data.forEach(post => {
+      //grab each post and render it to page
+      // console.log(post.body)
+      
+    })
   })
   .catch(err => console.log(err))
 }
