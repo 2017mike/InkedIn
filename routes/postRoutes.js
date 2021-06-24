@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Post, Comment } = require('../models')
+const { User, Post, Comment } = require('../models')
 const passport = require('passport')
 //all of these routes require the user to be authenticated
 //led with the /api route
@@ -11,7 +11,16 @@ router.get('/posts', passport.authenticate('jwt'), (req, res) => Post.findAll({
   .then(posts => res.json(posts))
   .catch(err => console.log(err)))
 
-
+//not working 6/23/2021
+// //get all posts from one user
+// router.get('/posts/users', passport.authenticate('jwt'), (req, res) => {
+//   Post.findAll({
+//     where: { uid: req.user.id },
+//     include: [User, Comment]
+//   })
+//     .then(posts => res.json(posts))
+//     .catch(err => console.log(err))
+// })
 
 //get one post by id
 router.get('/posts/:id', passport.authenticate('jwt'), (req, res) => Post.findOne({ where: {id: req.params.id}, include: [Comment]
