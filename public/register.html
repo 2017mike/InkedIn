@@ -120,6 +120,35 @@ radio:required {
   </div>
 </div>
 
+  <h1>Register Page</h1>
+  <form>
+    <p>
+      <label for="name">name</label>
+      <input type="text" name="name" id="name">
+    </p>
+    <p>
+      <label for="email">email</label>
+      <input type="email" name="email" id="email">
+    </p>
+    <p>
+      <label for="username">username</label>
+      <input type="text" name="username" id="username">
+    </p>
+    <p>
+      <label for="password">password</label>
+      <input type="password" name="password" id="password">
+    </p>
+    <p>
+      <button id="register">Register User</button>
+    </p>
+  </form>
+  <a href="/api/users/facebook" class="fb btn">
+    <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+  </a>
+  <a href="/login.html">Have An Account? Login</a>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- our javascript -->
+  <script src="./assets/js/register.js"></script>
 </body>
 
 </html>
