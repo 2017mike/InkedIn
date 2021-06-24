@@ -12,7 +12,6 @@ router.get('/register', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'register.html'))
 })
 
-
 //sends user to their profile page
 router.get('/profile', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'profile.html'))

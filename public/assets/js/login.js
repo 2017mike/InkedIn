@@ -4,16 +4,15 @@ document.getElementById('login').addEventListener('click', event => {
     username: document.getElementById('username').value,
     password: document.getElementById('password').value
   })
-  //now we get the token
-  .then(({ data: token}) => {
-    if(token) {
-      localStorage.setItem('token', token)
-      window.location = '/'
-    } else {
-      alert('Invalid username or password')
-    }
-  })
-  .catch(err => console.log(err))
+    .then(({ data: token }) => {
+      if (token) {
+        localStorage.setItem('token', token)
+        window.location = '/home'
+      } else {
+        alert('Invalid username or password')
+      }
+    })
+    .catch(err => console.error(err))
 })
 
 document.getElementById('register').addEventListener('click', event => {

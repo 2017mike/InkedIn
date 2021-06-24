@@ -38,17 +38,16 @@
 
 
 
-  <div class="container">
 
 
 <main>
 
   <!-- <img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" /> -->
   <!-- <div class="section"></div> -->
+<div class="container">
 
   <h5 class="indigo-text">Please login into your account</h5>
   <!-- <div class="section"></div> -->
-
 
   <div class="z-depth-1 grey lighten-4 row"
     style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
@@ -87,18 +86,13 @@
           <a type='submit' name='btn_login' class='col s12 btn btn-large waves-effect #4caf50 green' id='register'
             href="/register.html">Create Account</a>
 
-
-
         </div>
       </center>
     </form>
   </div>
   </div>
+</div>
 
-
-
-  <div class="section"></div>
-  <div class="section"></div>
 </main>
 
 
@@ -108,114 +102,12 @@
 
 
 
-  </div>
 
-  <script> src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-
-  <script>
-
-    // // start of functions/ initiators for materialize to work for our pages
-    // //for side nav to work
-    // document.addEventListener('DOMContentLoaded', function () {
-    //   var elem = document.querySelector('.sidenav');
-    //   var instance = new M.Sidenav(elem);
-    // });
-    // //materialize auto intiation
-    // M.AutoInit();
-
-    // // When the user scrolls the page, execute myFunction
-    // window.onscroll = function () { myFunction() };
-
-    // // Get the header
-    // var header = document.getElementById("navbarStick");
-
-    // // Get the offset position of the navbar
-    // var sticky = header.offsetTop;
-
-    // // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    // function myFunction() {
-    //   if (window.pageYOffset > sticky) {
-    //     header.classList.add("sticky");
-    //   } else {
-    //     header.classList.remove("sticky");
-    //   }
-    // }
-
-    //route functions
-
-    document.getElementById('login').addEventListener('click', event => {
-        event.preventDefault()
-        axios.post('/api/users/login', {
-          username: document.getElementById('username').value,
-          password: document.getElementById('password').value
-        })
-          .then(({ data: token }) => {
-            if (token) {
-              localStorage.setItem('token', token)
-              window.location = '/home'
-            } else {
-              alert('Invalid username or password')
-            }
-          })
-          .catch(err => console.error(err))
-      })
-
-
-      
-    // document.getElementById('signOut').addEventListener('click', event => {
-    //     localStorage.removeItem('token')
-    //     window.location = '/login.html'
-    //   })
-
-    //   document.getElementById('addPost').addEventListener('click', event => {
-    //     event.preventDefault()
-    //     axios.post('/api/items', {
-    //       text: document.getElementById('text').value,
-    //       isDone: false
-    //     }, {
-    //       headers: {
-    //         'Authorization': `Bearer ${localStorage.getItem('token')}`
-    //       }
-    //     })
-    //       .then(({ data: item }) => {
-    //         const itemElem = document.createElement('li')
-    //         itemElem.innerHTML = `
-    //       <p>Text: ${item.text}</p>
-    //       <p>isDone: ${item.isDone}</p>
-    //       `
-    //         document.getElementById('items').append(itemElem)
-    //       })
-    //       .catch(err => window.location = '/login.html')
-    //   })
-
-    //   axios.get('/api/items', {
-    //     headers: {
-    //       'Authorization': `Bearer ${localStorage.getItem('token')}`
-    //     }
-    //   })
-    //     .then(({ data: items }) => {
-    //       items.forEach(item => {
-    //         const itemElem = document.createElement('li')
-    //         itemElem.innerHTML = `
-    //       <p>Text: ${item.text}</p>
-    //       <p>isDone: ${item.isDone}</p>
-    //       `
-    //         document.getElementById('items').append(itemElem)
-    //       })
-
-    //     })
-    //     .catch(err => window.location = '/login.html')
-
-  </script>
-
+  <script src="./assets/js/login.js"></script>
 
 </body>
 
