@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
-  
+
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,52 +27,52 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+
     }
-  
+
     .container {
       background: transparent;
       padding: 20px 25px;
       border: 5px transparent;
-      width: 550px;
+      width: 80vw;
       height: auto;
       box-sizing: border-box;
       position: relative;
 
     }
-  
+
     .col.s6>.btn {
       width: 100%;
     }
-  
+
     radio:required {
       border-color: red;
     }
-  
+
     .container {
       animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
     }
-  
+
     @keyframes showUp {
       0% {
         transform: scale(0);
       }
-  
+
       100% {
         transoform: scale(1);
       }
     }
-  
+
     .row {
       margin-bottom: 10px;
     }
-  
+
     .ngl {
       position: absolute;
       top: -20px;
       right: -20px;
     }
-  
+
     .usernameField {
       font-size: 16px;
       color: darkgray;
@@ -80,55 +81,153 @@
     .mainContainer {
       margin-top: 10px;
       color: white;
+      font-size: 20px;
+      background: #222;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+
+    .subContainer {
+      padding: 20px;
+    }
+
+    .mySpan {
       font-size: 16px;
-       background: #222;
-     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-      
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+    }
+
+    .myCardContent {
+      font-size: 14px;
     }
   </style>
-  </head>
-  
-  <body>
-  
-    <div class="container">
-
-      <div class="mainContainer">
-
-      <h1>About InkedIn</h1>
-
-      <p>InkedIn is a marketplace specifically for tattoo designs. InkedIn was conceived when we saw tattoo artists posting
-        their designs on social media, and we wondered whether there might be a better place for them to do business. So we
-        made it.
-      </p>
-      
-      
-      
-      <p>
-        InkedIn has two types of posts: offers and requests. An offer is where any artist can put their tattoo design up
-        for sale. Once someone buys a design, they can take it to their local tattoo artist to have it done. Alternatively,
-        the artist and buyer can also meet up if they wish.
-      </p>
-      
-      
-      <p>
-        A request is a post where someone can post a picture and/or description of a tattoo they would like, and an artist can
-        design that tattoo for them. The specifics of each deal can be worked out between the two parties (InkedIn does not
-        handle transactions).
-      
-      </p>
-      
-       <p> The beauty of InkedIn is that anyone can get a tattoo design from artists all over the world. We hope that InkedIn makes it possible for people to get designs from their favorite artists no matter where they are in the world. </p>
-
-  
-        </div>
-  
-  
-     
-  
-     
-    </div>
 </head>
+
 <body>
-  
-</body>
+
+  <div class="container">
+
+    <div class="mainContainer">
+
+      <div class="subContainer">
+        <h1 class="center">About InkedIn</h1>
+
+
+
+        <p>InkedIn is a marketplace specifically for tattoo designs. InkedIn was conceived when we saw tattoo artists
+          posting
+          their designs on social media, and we wondered whether there might be a better place for them to do business.
+          So we
+          made it.
+        </p>
+
+
+        <h3 class="center">Offers</h3>
+        <p>
+          InkedIn has two types of posts: offers and requests. An offer is where any artist can put their tattoo design
+          up
+          for sale. Once someone buys a design, they can take it to their local tattoo artist to have it done.
+          Alternatively,
+          the artist and buyer can also meet up if they wish.
+        </p>
+
+        <h3 class="center">Requests</h3>
+        <p>
+          A request is a post where someone can post a picture and/or description of a tattoo they would like, and an
+          artist can
+          design that tattoo for them. The specifics of each deal can be worked out between the two parties (InkedIn
+          does not
+          handle transactions).
+
+        </p>
+
+        <h3 class="center">Our Goal</h3>
+        <p> The beauty of InkedIn is that anyone can get a tattoo design from artists all over the world. We hope that
+          InkedIn makes it possible for people to get designs from their favorite artists no matter where they are in
+          the world. </p>
+
+
+        <h3 class="center">Team</h3>
+
+        <div class="row">
+         
+            <div class="col s12 l4">
+              <div class="card transparent">
+                <div class="card-image">
+                  <img src="./assets/images/Joon2.jpeg">
+                  <span class="card-title black-text">Sle Ahn</span>
+                </div>
+                <div class="card-content">
+                  <p class="myCardContent">Sle Ahn is a 29 year-old Korean-American studying full stack development. Previously, he worked as a headserver and as
+                  an assistant manager at multiple restaurants for six years.</p>
+                </div>
+                <div class="card-action">
+                  <a href="https://www.linkedin.com/in/sle-ahn" target="_blank">LinkedIn</a>
+                  <a href="https://github.com/silentsonata92" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 l4">
+              <div class="card transparent">
+                <div class="card-image">
+                  <img src="./assets/images/Joon2.jpeg">
+                  <span class="card-title black-text">Jake Eckfeldt</span>
+                </div>
+                <div class="card-content">
+                  <p class="myCardContent">Jake Eckfeldt is a 20-year-old rockstar computer science student who knows how to work hard and play even harder. His main assets are his programming skills and his chiseled jawline.</p>
+                </div>
+                <div class="card-action">
+                 
+                  <a href="https://github.com/JEckfeldt" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 l4">
+              <div class="card transparent">
+                <div class="card-image">
+                  <img src="./assets/images/IMG_0003.PNG">
+                  <span class="card-title white-text">Michael Scharf</span>
+                </div>
+                <div class="card-content">
+                  <p class="myCardContent">Michael Scharf is an aspiring junior developer who is learning more about coding every day. In his free time, he enjoys
+                  playing guitar and watching anime.</p>
+                </div>
+                <div class="card-action">
+                  <a href="https://www.linkedin.com/in/michael-scharf-398899111" target="_blank">LinkedIn</a>
+                  <a href="https://github.com/2017mike" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </div>
+            
+
+           
+          
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+  </div>
+  </head>
+
+  <body>
+
+  </body>
+
 </html>
