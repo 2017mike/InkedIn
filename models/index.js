@@ -8,5 +8,6 @@ User.hasMany(Comment, {foreignKey: 'uid'})
 User.hasMany(Post, {foreignKey: 'uid'})
 //1 Post also has many comments
 Post.hasMany(Comment, { foreignKey: 'pid' })
+Post.belongsTo(User, {foreignKey: 'uid'})
 
 module.exports = { User, Comment, Post }
