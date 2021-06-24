@@ -33,7 +33,7 @@
 <div class="container">
   <form method="GET" id='post_form'>
   <div class="input-field col s12 validate">
-    <select>
+    <select id="postOrRequest">
       <option value="" disabled selected>Choose your option</option>
       <option value="1">Post</option>
       <option value="2">Request</option>
@@ -106,6 +106,39 @@
       })
       .catch(err => window.location = '/login.html')
   })   
+
+
+//   document.getElementById('addPost').addEventListener('click', event => {
+//     event.preventDefault()
+//     axios.post('/api/posts', {
+
+//       type: document.getElementById('text').value,
+//       imgURL: 
+//       body: 
+//       contactEmail:
+//       contactNumber:
+      
+
+
+//     }, {
+//       headers: {
+//         'Authorization': `Bearer ${localStorage.getItem('token')}`
+//       }
+//     })
+//       .then(({ data: post }) => {
+//         const itemElem = document.createElement('li')
+//         itemElem.innerHTML = `
+//       <p>Text: your post has been created! :)</p>
+
+// `
+//         document.getElementById('items').append(itemElem)
+//       })
+//       .catch(err => window.location = '/login.html')
+//   })
+
+
+
+      
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
 </body>
