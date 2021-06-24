@@ -18,6 +18,16 @@ We need a empty div that will be populated with cards through javascript -->
     .brand-logo{
       margin-left: 1%;
     }
+    .card-image{
+      background-position: top!important;
+      height: 200px;
+    }
+    .card{
+      height: 300px;
+    }
+    .image-reveal{
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -43,44 +53,74 @@ We need a empty div that will be populated with cards through javascript -->
   </ul>
   <div class="container">
     <div class="row">
-      <div class="col m4">
+      <div class="col s4">
         <div class="card">
-          <div class="card-image">
-            <img
-              src="https://static.wikia.nocookie.net/topstrongest/images/1/19/Images%281%29.jpg/revision/latest?cb=20180425164546">
-            <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Offer</span>
+          <div class="card-image waves-effect">
+            <img class= 'activator' src="https://static.wikia.nocookie.net/topstrongest/images/1/19/Images%281%29.jpg/revision/latest?cb=20180425164546">
           </div>
-          <div class="card-action center-align ">
-            <a href="#">This is a link</a>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title</span>
+            <p><a href="#">This is a link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">
+              <i class="material-icons right">close</i></span>
+              <img class='image-reveal' src="https://static.wikia.nocookie.net/topstrongest/images/1/19/Images%281%29.jpg/revision/latest?cb=20180425164546" alt="">
           </div>
         </div>
-      </div>
-      <div class="col m4">
+      </div>  
+      <div class="col s4">
         <div class="card">
-          <div class="card-image">
-            <img
+          <div class="card-image waves-effect">
+            <img class='activator' 
               src="https://numpaint.com/wp-content/uploads/2020/08/yuno-gasai-future-diary-series-paint-by-numbers.jpg">
-            <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Request</span>
           </div>
-          <div class="card-action center-align">
-            <a href="#">This is a link</a>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title</span>
+            <p><a href="#">This is a link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span' class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <img class='image-reveal' src="https://numpaint.com/wp-content/uploads/2020/08/yuno-gasai-future-diary-series-paint-by-numbers.jpg" alt="">
           </div>
         </div>
       </div>
-      <div class="col m4">
+      <div class="col s4">
         <div class="card">
-          <div class="card-image">
-            <img src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
-            <span class="card-title" style="width:100%; background: rgba(0, 0, 0, 0.5);">Offer</span>
+          <div class="card-image waves-effect">
+            <img class='activator' 
+              src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
           </div>
-          <div class="card-action center-align">
-            <a href="#">This is a link</a>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title</span>
+            <p><a href="#">This is a link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <img class='image-reveal' src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="card">
+          <div class="card-image waves-effect">
+            <img class='activator'
+              src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Card Title</span>
+            <p><a href="#">This is a link</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <img class='image-reveal'
+              src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
      document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.sidenav');
