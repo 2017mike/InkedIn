@@ -1,0 +1,1 @@
+//here we render all posts from all users as cards
