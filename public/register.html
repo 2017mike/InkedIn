@@ -16,7 +16,7 @@
 
     body {
   background: #222;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://unsplash.it/1200/800/?random');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cdn.pixabay.com/photo/2017/08/07/00/20/people-2597905_1280.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -38,12 +38,7 @@
 .col.s6 > .btn {
    width: 100%;
 }
-.gender-male,.gender-female {
-  display: inline-block;
-}
-.gender-female {
-  margin-left: 35px;
-}
+
 radio:required {
   border-color: red;
 }
@@ -67,18 +62,26 @@ radio:required {
   right: -20px;
 }
 
+.usernameField {
+  font-size: 12px;
+  color: darkgray;
+}
+
 
   </style>
 </head>
 
 <body>
+  
 <div class="container valign-wrapper">
+  
+
 
   
   <!-- <div class="section"></div> -->
 
   <div class="z-depth-1 grey lighten-4 row v-align"
-    style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+    style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE; margin-top: 12px;">
     <h5 class="indigo-text center">Create an account</h5>
     <form class="col s12 " method="post">
       <div class='row center-align'>
@@ -87,8 +90,9 @@ radio:required {
       </div>
       <div class='row'>
         <div class='input-field col s12'>
-          <label for='email'>Enter your username</label>
+          <label for='email'></label>
           <input class='validate' name='email' id='username' />
+          <p class="usernameField">choose a username</p>
           
         </div>
       </div>
@@ -96,7 +100,8 @@ radio:required {
       <div class='row'>
         <div class='input-field col s12'>
           <input class='validate' type='password' name='password' id='password' />
-          <label for='password'>Enter your password</label>
+          <label for='password'></label>
+          <p class="usernameField">choose a password</p>
         </div>
 
       </div>
@@ -110,9 +115,11 @@ radio:required {
           <div class='col s12'></div>
           <div class='col s12'></div>
           <div class='col s12'></div>
-          <a type='submit' name='btn_login' class='col s12 btn btn-large waves-effect #4caf50 green' id='register'
+          <a type='submit' name='btn_login' class='col s12 btn btn-large waves-effect #558b2f light-green darken-3' id='register'
             href="/register.html">Create Account</a>
+            <div class='col s12'></div>
 
+          
         </div>
       </center>
     </form>
