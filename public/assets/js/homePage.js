@@ -1,15 +1,12 @@
 
-//render pages
-const renderPosts = () => {
-
   axios.get('/api/posts', {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }
   })
   .then(({ data }) => {
+    console.log(data)
     let postType = 'Offer'
-    // console.log(data)
     data.forEach(post => {
       if(postType) {
         postType = 'Request'
@@ -32,12 +29,10 @@ const renderPosts = () => {
         </div>
       </div>
       `
-
       //end forEach
     })
   })
   .catch(err => console.log(err))
-}
 
 //listener to view post
 document.addEventListener('click', event => {

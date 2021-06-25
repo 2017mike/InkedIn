@@ -40,50 +40,67 @@
    #btn1{
      margin-left: 1%;
    }
+   #postBody {
+     font-size: 14px;
+     line-height: 24px;
+     letter-spacing: 1px;
+   }
+
+   
+  .nav-wrapper a:hover {
+  background: #ddd;
+  color: black;
+  }
   </style>
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper black">
-      <a href="/home" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/home">Home</a></li>
-        <li><a href="/profile">My Profile</a></li>
-        <li><a href="/aboutus">About</a></li>
-        <li><a href="/login">Sign Out</a></li>
-      </ul>
-  
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="/home">Home</a></li>
-        <li><a href="/profile">My Profile</a></li>
-        <li><a href="/aboutus">About</a></li>
-        <li id="signOut"><a href="">Sign Out</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper black">
+        <a href="/home" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/profile">My Profile</a></li>
+          <li><a href="/aboutus">About</a></li>
+          <li><a href="/login">Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/profile">My Profile</a></li>
+    <li><a href="/aboutus">About</a></li>
+    <li><a href="/login">Sign Out</a></li>
+  </ul>
 
   <section>
 <div class="row">
   <div class="col s12 m4">
-    <div class="card">
+    <div class="card">  
       <div class="card-image">
-        <img src="https://numpaint.com/wp-content/uploads/2020/08/yuno-gasai-future-diary-series-paint-by-numbers.jpg" alt="">
+        <!-- url to the image goes here -->
+        <img id="imageUrl" src="" alt="Image Not found">
       </div>
     </div>
   </div>
   
   <div class="card col s12 m8">
     <div class="row">
-      <div class='card-content center'><h6 class="flow-text">Request</h6>
+      <div class='card-content center'><h6 class="flow-text" id="postType">
+        <!-- this is the post type (req/offer) -->
+      </h6>
     </div>    
       <div class="divider"></div>
     </div>
     <div class="row">
       <div class="col s12">
-        <div class="card-content">
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, repudiandae et! Dicta hic, totam molestiae sit tenetur rerum architecto. Quaerat tempora omnis beatae cum error similique. Esse fuga velit eum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt ipsa voluptatum ea ipsum numquam ab, at, deleniti atque consequatur error asperiores, quod ullam inventore tenetur a nemo illo quisquam? </p>
+        <div class="card-content" style="text-align: center;">
+          <p id="postBody">
+            <!-- this is where the body goes -->
+          </p>
         </div>
       </div>
     </div>
@@ -92,8 +109,11 @@
         <div class="col s12">
           <div class="card-content contact">
             <p>Contact Info:</p>
-            <p>Phone number</p>
-            <p>Email</p>
+            <!-- contact info goes here -->
+            <br>
+            <p id="contactNumber">my number</p>
+            <br>
+            <p id="contactEmail">my email</p>
           </div>
         </div>
       </div>
@@ -104,7 +124,7 @@
             <textarea id="textarea1" class="materialize-textarea"></textarea>
             <label for="textarea1">Comment</label>
           </div>
-          <button id='btn1' class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <button id='addComment' class="btn waves-effect waves-light" type="submit" name="action">Submit
             <i class="material-icons right">send</i>
           </button>
         </div>
@@ -114,7 +134,7 @@
 </div>
   </section>
   <section>
-    <ul class="collection">
+    <ul class="collection" id="comments">
       <li class="collection-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus reiciendis nisi
         laboriosam dolores eligendi qui commodi. Consequatur explicabo quidem quasi sint a, quisquam illo vel ut, similique
         consequuntur in blanditiis!</li>

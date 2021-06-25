@@ -27,8 +27,15 @@ We need a empty div that will be populated with cards through javascript -->
       background-size: cover;
       
     }
-
-   
+    /* nav{
+      position: fixed!important;
+      top: 0%;
+      width: 100%;
+      z-index: 300;
+    } */
+    .container{
+      z-index: -1!important;
+    }
 
     .nav-wrapper{
       background-color: black;
@@ -51,34 +58,38 @@ We need a empty div that will be populated with cards through javascript -->
       right: 20px;
       bottom: 10px;
     }
+    .nav-wrapper a:hover {
+  background: #ddd;
+  color: black;
+  }
   </style>
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper black">
-      <a href="" class="brand-logo" id="logoButton">‎‏‎ ‎‏‎InkedIn</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li id="homePage"><a href="">Home</a></li>
-        <li id="profilePage"><a href="">My Profile</a></li>
-        <li id="aboutPage"><a href="">About</a></li>
-        <li id="signOut"><a href="">Sign Out</a></li>
-      </ul>
-  
-      <ul class="sidenav" id="mobile-demo">
-        <li id="homePageNav"><a href="">Home</a></li>
-        <li id="profilePageNav"><a href="">My Profile</a></li>
-        <li id="aboutPageNav"><a href=''>About</a></li>
-        <li id="signOutNav"><a href="">Sign Out</a></li>
-      </ul>
-    </div>
-  </nav>
-  
-
-<div class="container">
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper black">
+        <a href="/home" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/profile">My Profile</a></li>
+          <li><a href="/aboutus">About</a></li>
+          <li><a href="/login">Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/profile">My Profile</a></li>
+    <li><a href="/aboutus">About</a></li>
+    <li><a href="/login">Sign Out</a></li>
+  </ul>
+    
+<div class="section">
   <div class="row center">
-    <h1>Home</h1>
+    <h1 class="section">Home</h1>
   </div>
 </div>
 
