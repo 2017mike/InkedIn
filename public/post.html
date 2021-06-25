@@ -58,22 +58,22 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper black">
-        <a href="/home" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
+        <a href="" class="brand-logo" id="logoButton">‎‏‎ ‎‏‎InkedIn</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/home">Home</a></li>
-          <li><a href="/profile">My Profile</a></li>
-          <li><a href="/aboutus">About</a></li>
-          <li><a href="/login">Sign Out</a></li>
+          <li id="homePage"><a href="">Home</a></li>
+          <li id="profilePage"><a href="">My Profile</a></li>
+          <li id="aboutPage"><a href="">About</a></li>
+          <li id="signOut"><a href="">Sign Out</a></li>
         </ul>
       </div>
     </nav>
   </div>
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="/home">Home</a></li>
-    <li><a href="/profile">My Profile</a></li>
-    <li><a href="/aboutus">About</a></li>
-    <li><a href="/login">Sign Out</a></li>
+    <li id="homePageNav"><a href="">Home</a></li>
+    <li id="profilePageNav"><a href="">My Profile</a></li>
+    <li id="aboutPageNav"><a href="">About</a></li>
+    <li id="signOutNav"><a href="">Sign Out</a></li>
   </ul>
 
   <section>
@@ -146,6 +146,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/js/all.js"></script>
   <script>
     M.AutoInit();
     document.addEventListener('DOMContentLoaded', function () {

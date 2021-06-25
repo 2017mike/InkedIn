@@ -46,6 +46,8 @@ document.addEventListener('click', event => {
 
 renderPosts()
 
+
+
 //addPost button
 
 document.addEventListener('DOMContentLoaded', function () {
