@@ -23,7 +23,7 @@ const renderPosts = () => {
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">${postType}</span>
-            <p><a id="viewPost" href="#">See Post</a></p>
+            <p><a id="viewPost" data-id=${post.id} href="#">See Post</a></p>
           </div>
           <div class="card-reveal">
             <span' class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
@@ -32,20 +32,21 @@ const renderPosts = () => {
         </div>
       </div>
       `
-      
+
       //end forEach
     })
   })
   .catch(err => console.log(err))
 }
 
-
-
 //listener to view post
-
-
-
-
-
+document.addEventListener('click', event => {
+  event.preventDefault()
+  if(event.target.classList.contains('viewPost')) {
+    //grab post id set it to local storage then go to post page
+    localStorage.setItem('postId', event.target.dataset.id)
+    window.location = '/post'
+  }
+})
 
 renderPosts()
