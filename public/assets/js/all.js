@@ -44,7 +44,3 @@ document.getElementById('signOutNav').addEventListener('click', event => {
   window.location = '/login'
 })
 
-
-
-
-//
