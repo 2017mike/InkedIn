@@ -33,9 +33,6 @@ router.get('/home', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'home.html'))
 })
 
-router.get('/*', (req, res) => {
-  res.sendFile(join(__dirname, '..', 'public', 'home.html'))
-})
 
 
 
