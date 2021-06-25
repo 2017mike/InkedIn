@@ -54,3 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var instances = M.Tooltip.init(elems, options);
 });
 
+document.getElementById('addNewPost').addEventListener('click', event => {
+  window.location = '/create'
+})
+
