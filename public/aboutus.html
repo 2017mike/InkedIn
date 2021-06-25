@@ -48,7 +48,7 @@
       width: 80vw;
       height: auto;
       box-sizing: border-box;
-      position: relative;
+      /* position: relative; */
 
     }
 
@@ -111,12 +111,20 @@
     .myCardContent {
       font-size: 14px;
     }
+
+  .nav-wrapper a:hover {
+  background: #ddd;
+  color: black;
+  }
+  nav{
+    position: fixed!important;
+  }
   </style>
 </head>
 
 <body>
   <nav>
-    <div class="nav-wrapper black">
+    <div class="nav-wrapper black sticky">
       <a href="/home.html" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
