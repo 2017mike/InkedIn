@@ -8,6 +8,7 @@ axios.get(`/api/posts/${postId}`, {
   }
 })
 .then(({ data }) => {
-  console.log(data)
+  // console.log(data)
+  //fill in the datafields with post data
 })
 .catch(err => console.log(err))
