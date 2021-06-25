@@ -33,7 +33,9 @@ router.get('/home', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'home.html'))
 })
 
-
+router.get('/aboutus', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'public', 'aboutus.html'))
+})
 
 
 //export routes

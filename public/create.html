@@ -22,44 +22,53 @@
   <style>
     .container {
       outline: auto;
+      padding-top: 5%;
       padding: 2%;
-      margin-top: 1%;
+      /* margin-top: 1%; */
       background-color: ghostwhite;
-    }
+      position: static!important;
+     
+    } 
+    
     body {
       background: #dbd5d5;
+    /* height: 100vh!important; */
     }
-
+    
+  .space{
+    height: 10vh;
+  }
+  .nav-wrapper a:hover {
+  background: #ddd;
+  color: black;
+  }
     
   </style>
 </head>
 
 <body>
-
+<div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper black">
-      <a href="#!" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
+      <a href="/home" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Home</a></li>
-        <li><a href="badges.html">Offers</a></li>
-        <li><a href="collapsible.html">Requests</a></li>
-        <li><a href="collapsible.html">My Profile</a></li>
-        <li><a href="collapsible.html">About</a></li>
-        <li><a href="mobile.html">Sign Out</a></li>
-      </ul>
-
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Home</a></li>
-        <li><a href="badges.html">Offers</a></li>
-        <li><a href="collapsible.html">Requests</a></li>
-        <li><a href="collapsible.html">My Profile</a></li>
-        <li><a href="collapsible.html">About</a></li>
-        <li><a href="mobile.html">Sign Out</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/profile">My Profile</a></li>
+        <li><a href="/aboutus">About</a></li>
+        <li><a href="/login">Sign Out</a></li>
       </ul>
     </div>
   </nav>
+</div>
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="/home">Home</a></li>
+  <li><a href="/profile">My Profile</a></li>
+  <li><a href="/aboutus">About</a></li>
+  <li><a href="/login">Sign Out</a></li>
+</ul>
 
+  <div class="space"></div>
   <div class="container">
     <form method="GET" id='post_form'>
       <div class="row">
