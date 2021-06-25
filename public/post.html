@@ -40,29 +40,35 @@
    #btn1{
      margin-left: 1%;
    }
+   
+  .nav-wrapper a:hover {
+  background: #ddd;
+  color: black;
+  }
   </style>
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper black">
-      <a href="/home" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/home">Home</a></li>
-        <li><a href="/profile">My Profile</a></li>
-        <li><a href="/aboutus">About</a></li>
-        <li><a href="/login">Sign Out</a></li>
-      </ul>
-  
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="/home">Home</a></li>
-        <li><a href="/profile">My Profile</a></li>
-        <li><a href="/aboutus">About</a></li>
-        <li id="signOut"><a href="">Sign Out</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper black">
+        <a href="/home" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/profile">My Profile</a></li>
+          <li><a href="/aboutus">About</a></li>
+          <li><a href="/login">Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/home">Home</a></li>
+    <li><a href="/profile">My Profile</a></li>
+    <li><a href="/aboutus">About</a></li>
+    <li><a href="/login">Sign Out</a></li>
+  </ul>
 
   <section>
 <div class="row">
