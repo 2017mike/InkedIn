@@ -6,16 +6,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Create a Post</title>
   <!-- Compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
 
   <style>
     .container {
       outline: auto;
       padding: 2%;
       margin-top: 1%;
+      background-color: ghostwhite;
     }
+    body {
+      background: #dbd5d5;
+    }
+
+    
   </style>
 </head>
 
@@ -33,7 +48,7 @@
         <li><a href="collapsible.html">About</a></li>
         <li><a href="mobile.html">Sign Out</a></li>
       </ul>
-  
+
       <ul class="sidenav" id="mobile-demo">
         <li><a href="sass.html">Home</a></li>
         <li><a href="badges.html">Offers</a></li>
@@ -44,92 +59,89 @@
       </ul>
     </div>
   </nav>
-  
+
   <div class="container">
     <form method="GET" id='post_form'>
+      <div class="row">
       <div class="input-field col s12 validate">
-        <select id="postOrRequest">
+        <select id="type">
           <option value="" disabled selected>Choose your option</option>
           <option value="1">Post</option>
           <option value="2">Request</option>
         </select>
         <label>Select</label>
       </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col s12"> -->
       <div class="row">
-        <div class="col s12">
-          <div class="row">
+        <div class="input-field col s12">
+          <input id="postTitle" type="text" class="validate">
+          <label for="postTitle">Title</label>
+        </div>
+      </div>
+      <div class="row">
+        <!-- <form class="col s12"> -->
+          <!-- <div class="row"> -->
             <div class="input-field col s12">
-              <input id="last_name" type="text" class="validate">
-              <label for="post_title">Title</label>
+              <textarea id="imageURL" class="materialize-textarea validate"></textarea>
+              <label for="textarea1">Image URL</label>
             </div>
-          </div>
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" class="materialize-textarea validate"></textarea>
-                  <label for="textarea1">Image URL</label>
-                </div>
-              </div>
-          </div>
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" class="materialize-textarea validate"></textarea>
-                  <label for="textarea1">Description</label>
-                </div>
-              </div>
-          </div>
-          <div class="input-field col s12">
-            <input id="first_name" type="text" class="validate">
-            <label for="phone_number">Phone Number</label>
-          </div>
-          <div class="row">
+          <!-- </div> -->
+      </div>
+      <div class="row">
+        <!-- <form class="col s12"> -->
+          <!-- <div class="row"> -->
             <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email</label>
+              <textarea id="description" class="materialize-textarea validate"></textarea>
+              <label for="textarea1">Description</label>
             </div>
-          </div>
+          <!-- </div> -->
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="contactNumber" type="text" class="validate">
+          <label for="post_title">Contact Number</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
     </form>
 
-    <div id="success">
-
-
-    </div>
-    <button form='post_form' class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+  
+    <button form='post_form' class="btn waves-effect waves-light black" type="submit" name="action">Submit</button>
   </div>
-  </div>
+
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
-      M.AutoInit();
-      document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('select');
-        var instances = M.FormSelect.init(elems, options);
-      });
-      document.getElementById('addPost').addEventListener('click', event => {
-        event.preventDefault()
-        axios.post('/api/posts', {
+    M.AutoInit();
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems, options);
+    });
+  //   document.getElementById('addPost').addEventListener('click', event => {
+  //     event.preventDefault()
+  //     axios.post('/api/posts', {
 
-          //   type: document.getElementById('text').value,
-          //   imgURL: 
-          //   body: 
-          //   contactEmail:
-          //   contactNumber:
-          // }, {
-          headers: {
-            'Authorization': `Bearer ${localStorage.getItem('token')}`
-          }
-        })
-          .then(({ data: post }) => {
-            const itemElem = document.createElement('li')
-            itemElem.innerHTML = `
-      <p>Text: your post has been created! :)</p>
-  `
-            document.getElementById('items').append(itemElem)
-          })
-          .catch(err => window.location = '/login.html')
-      })
+        
+  //       headers: {
+  //         'Authorization': `Bearer ${localStorage.getItem('token')}`
+  //       }
+  //     })
+  //       .then(({ data: post }) => {
+  //         const itemElem = document.createElement('li')
+  //         itemElem.innerHTML = `
+  //     <p>Text: your post has been created! :)</p>
+  // `
+  //         document.getElementById('items').append(itemElem)
+  //       })
+  //       .catch(err => window.location = '/login.html')
+  //   })
 
 
 //   document.getElementById('addPost').addEventListener('click', event => {
@@ -164,7 +176,7 @@
 
 
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 
 </html>
