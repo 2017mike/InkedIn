@@ -20,18 +20,31 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+
+  <nav>
+    <div class="nav-wrapper black">
+      <a href="#!" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Home</a></li>
+        <li><a href="badges.html">Offers</a></li>
+        <li><a href="collapsible.html">Requests</a></li>
+        <li><a href="collapsible.html">My Profile</a></li>
+        <li><a href="collapsible.html">About</a></li>
+        <li><a href="mobile.html">Sign Out</a></li>
+      </ul>
+  
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Home</a></li>
+        <li><a href="badges.html">Offers</a></li>
+        <li><a href="collapsible.html">Requests</a></li>
+        <li><a href="collapsible.html">My Profile</a></li>
+        <li><a href="collapsible.html">About</a></li>
+        <li><a href="mobile.html">Sign Out</a></li>
+      </ul>
+    </div>
+  </nav>
+  
   <div class="container">
     <form method="GET" id='post_form'>
       <div class="input-field col s12 validate">
@@ -55,7 +68,16 @@
               <div class="row">
                 <div class="input-field col s12">
                   <textarea id="textarea1" class="materialize-textarea validate"></textarea>
-                  <label for="textarea1">Textarea</label>
+                  <label for="textarea1">Image URL</label>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="textarea1" class="materialize-textarea validate"></textarea>
+                  <label for="textarea1">Description</label>
                 </div>
               </div>
           </div>

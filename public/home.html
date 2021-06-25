@@ -8,7 +8,7 @@ We need a empty div that will be populated with cards through javascript -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>InkedIn -- Home</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,6 +28,8 @@ We need a empty div that will be populated with cards through javascript -->
       
     }
 
+   
+
     .nav-wrapper{
       background-color: black;
     }
@@ -44,18 +46,25 @@ We need a empty div that will be populated with cards through javascript -->
     .image-reveal{
       width: 100%;
     }
+    .btn-floating {
+      position: fixed;
+      right: 20px;
+      bottom: 10px;
+    }
   </style>
 </head>
 
 <body>
   <nav>
     <div class="nav-wrapper black">
-      <a href="#!" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
+      <a href="/home.html" class="brand-logo">‎‏‎ ‎‏‎InkedIn</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Home</a></li>
+        <li><a href="/home.html">Home</a></li>
         <li><a href="badges.html">Offers</a></li>
         <li><a href="collapsible.html">Requests</a></li>
+        <li><a href="/profile.html">My Profile</a></li>
+        <li><a href="collapsible.html">About</a></li>
         <li><a href="mobile.html">Sign Out</a></li>
       </ul>
   
@@ -63,10 +72,18 @@ We need a empty div that will be populated with cards through javascript -->
         <li><a href="sass.html">Home</a></li>
         <li><a href="badges.html">Offers</a></li>
         <li><a href="collapsible.html">Requests</a></li>
+        <li><a href="collapsible.html">My Profile</a></li>
+        <li><a href="collapsible.html">About</a></li>
         <li><a href="mobile.html">Sign Out</a></li>
       </ul>
     </div>
   </nav>
+
+<div class="containter">
+  <div class="row center">
+    <h1>Home</h1>
+  </div>
+</div>
 
 
   <div class="container">
@@ -146,6 +163,11 @@ We need a empty div that will be populated with cards through javascript -->
     </div>
   </div>
 
+  <a class="btn-floating btn-large waves-effect waves-light black right-align tooltipped " data-position="top"
+    data-tooltip="Add a New Post"><i class="material-icons">add</i></a>
+
+  
+
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -159,6 +181,10 @@ We need a empty div that will be populated with cards through javascript -->
       var elems = document.querySelectorAll('select');
       var instances = M.FormSelect.init(elems, options);
     })
+     document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.tooltipped');
+        var instances = M.Tooltip.init(elems, options);
+      });
   </script>
 </body>
 
