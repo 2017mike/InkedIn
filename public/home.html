@@ -31,8 +31,20 @@ We need a empty div that will be populated with cards through javascript -->
       width: 100%;
       z-index: 300;
     } */
+
+    @keyframes showUp {
+      0% {
+        transform: scale(0);
+      }
+
+      100% {
+        transoform: scale(1);
+      }
+    }
+
     .container{
       z-index: -1!important;
+      animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
     }
 
     .nav-wrapper{
@@ -102,14 +114,14 @@ We need a empty div that will be populated with cards through javascript -->
   <div class="container">
     <div class="row" id="renderCards">
       <div class="col m4 s12">
-        <div class="card">
+        <div class="card #212121 #424242 grey darken-3">
           <div class="card-image waves-effect">
             <img class='activator responsive-img'
               src="https://i.redd.it/8hq0hesdvsa61.jpg">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <a class="waves-effect waves-light btn viewPost">view Post</a>
+            <span class="card-title activator white-text text-darken-4">Card Title</span>
+            <a class="waves-effect waves-light btn viewPost black">view</a>
           </div>
           <div class="card-reveal">
             <div class="card-title grey-text text-darken-4">
@@ -155,7 +167,8 @@ We need a empty div that will be populated with cards through javascript -->
           </div>
         </div>
       </div>
-      <div class="col s12 m4">
+
+      <div class="col m4 s12">
         <div class="card">
           <div class="card-image waves-effect">
             <img class='activator'
@@ -172,11 +185,30 @@ We need a empty div that will be populated with cards through javascript -->
           </div>
         </div>
       </div>
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <!-- this is where the cards get rendered -->
     </div>
   </div>
 
-  <a class="btn-floating btn-large waves-effect waves-light grey right-align tooltipped " data-position="top" id="addNewPost"
+  <a class="btn-floating btn-large waves-effect waves-light #b71c1c red darken-4 right-align tooltipped " data-position="top" id="addNewPost"
     data-tooltip="Add a New Post"><i class="material-icons">add</i></a>
 
   
