@@ -58,3 +58,9 @@ document.getElementById('addNewPost').addEventListener('click', event => {
   window.location = '/create'
 })
 
+M.AutoInit();
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems, options);
+})
+
