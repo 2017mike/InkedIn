@@ -18,14 +18,12 @@ We need a empty div that will be populated with cards through javascript -->
   <style>
 
 
-    body {
+     body {
       font-family: 'Benne', serif;
-      background: #dbd5d5;
-      
-      
-      /* background-repeat: repeat-y; */
+      background: #222;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
+      background-repeat: no-repeat;
       background-size: cover;
-      
     }
     /* nav{
       position: fixed!important;
@@ -67,6 +65,10 @@ We need a empty div that will be populated with cards through javascript -->
     height: auto;
     margin-bottom: 1%;
   }
+
+  .homeDiv {
+    margin-bottom: 0px;
+  }
   </style>
 </head>
 
@@ -92,17 +94,17 @@ We need a empty div that will be populated with cards through javascript -->
     <li id="signOutNav"><a href="">Sign Out</a></li>
   </ul>
     
-<div class="section">
+<!-- <div class="section"> -->
   <div class="row center">
-    <h1 class="section">Home</h1>
+    <h1 class="section white-text homeDiv">Home</h1>
   </div>
-</div>
+<!-- </div> -->
 
 
   <div class="container">
     <div class="row" id="renderCards">
       <div class="col s4">
-        <div class="card">
+        <div class="card grey">
           <div class="card-image waves-effect">
             <img class='activator responsive-img'
               src="https://i.redd.it/8hq0hesdvsa61.jpg">
@@ -176,7 +178,7 @@ We need a empty div that will be populated with cards through javascript -->
     </div>
   </div>
 
-  <a class="btn-floating btn-large waves-effect waves-light black right-align tooltipped " data-position="top" id="addNewPost"
+  <a class="btn-floating btn-large waves-effect waves-light grey right-align tooltipped " data-position="top" id="addNewPost"
     data-tooltip="Add a New Post"><i class="material-icons">add</i></a>
 
   
