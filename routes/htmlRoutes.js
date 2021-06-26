@@ -27,7 +27,6 @@ router.get('/create', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'create.html'))
 })
 
-
 //
 router.get('/home', (req, res) => {
   res.sendFile(join(__dirname, '..', 'public', 'home.html'))
