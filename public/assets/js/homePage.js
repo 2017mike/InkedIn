@@ -13,7 +13,7 @@ const renderCards = () => {
       }
       //grab each post and render it to page
       document.getElementById('renderCards').innerHTML += `
-      <div class="col s4">
+      <div class="col s12 m4">
         <div class="card">
           <div class="card-image waves-effect">
             <img class='activator' src="${post.imgUrl}" alt="image not found">
