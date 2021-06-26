@@ -45,10 +45,10 @@ We need a empty div that will be populated with cards through javascript -->
     }
     .card-image{
       background-position: top!important;
-      height: 200px;
+      height: 300px;
     }
     .card{
-      height: 300px;
+      height: 410px;
     }
     .image-reveal{
       width: 100%;
@@ -63,9 +63,7 @@ We need a empty div that will be populated with cards through javascript -->
   color: black;
   }
   .viewPost {
-    align-self: center;
-    height: auto;
-    margin-bottom: 1%;
+    padding-bottom: 10px!important;
   }
   </style>
 </head>
@@ -92,16 +90,15 @@ We need a empty div that will be populated with cards through javascript -->
     <li id="signOutNav"><a href="">Sign Out</a></li>
   </ul>
     
-<div class="section">
+
   <div class="row center">
     <h1 class="section">Home</h1>
-  </div>
 </div>
 
 
   <div class="container">
     <div class="row" id="renderCards">
-      <div class="col s4">
+      <div class="col m4 s12">
         <div class="card">
           <div class="card-image waves-effect">
             <img class='activator responsive-img'
@@ -109,18 +106,18 @@ We need a empty div that will be populated with cards through javascript -->
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">This is a link</a></p>
+            <a class="waves-effect waves-light btn viewPost">view Post</a>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">
-              <i class="material-icons right">close</i></span>
+            <div class="card-title grey-text text-darken-4">
+              <i class="material-icons right">close</i></div>
             <img class='image-reveal responsive-img'
               src="https://i.redd.it/8hq0hesdvsa61.jpg"
               alt="">
           </div>
         </div>
       </div>
-      <div class="col s4">
+      <div class="col m4 s12">
         <div class="card">
           <div class="card-image waves-effect">
             <img class='activator'
@@ -128,7 +125,7 @@ We need a empty div that will be populated with cards through javascript -->
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">This is a link</a></p>
+            <a class="waves-effect waves-light btn viewPost">view Post</a>
           </div>
           <div class="card-reveal">
             <span' class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
@@ -138,7 +135,7 @@ We need a empty div that will be populated with cards through javascript -->
           </div>
         </div>
       </div>
-      <div class="col s4">
+      <div class="col m4 s12">
         <div class="card">
           <div class="card-image waves-effect">
             <img class='activator'
@@ -146,7 +143,7 @@ We need a empty div that will be populated with cards through javascript -->
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">This is a link</a></p>
+            <a class="waves-effect waves-light btn viewPost">view Post</a>
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
@@ -155,7 +152,7 @@ We need a empty div that will be populated with cards through javascript -->
           </div>
         </div>
       </div>
-      <div class="col s4">
+      <div class="col s12 m4">
         <div class="card">
           <div class="card-image waves-effect">
             <img class='activator'
@@ -163,7 +160,7 @@ We need a empty div that will be populated with cards through javascript -->
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">This is a link</a></p>
+            <a class="waves-effect waves-light btn viewPost">view Post</a>
           </div>
           <div class="card-reveal">
             <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
