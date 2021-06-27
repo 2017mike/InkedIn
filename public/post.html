@@ -12,90 +12,9 @@
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/post.css">
 
-  <style>
 
-    body {
-      font-family: 'Benne', serif;
-      background: #222;
-      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1513628253939-010e64ac66cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-     @keyframes showUp {
-      0% {
-        transform: scale(0);
-      }
-
-      100% {
-        transoform: scale(1);
-      }
-    }
-
-    .popUp{
-      
-     
-      animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
-    }
-
-    .row {
-      background: #222;
-      
-    }
-    .col {
-      background: #222;
-    }
-
-   
-
-   
-    
-
-    .collection-item {
-      color: #222;
-    }
-
-    .card {
-      height: 80vh !important;
-      width: auto;
-      /* width: 80vw; */
-    }
-    /* section{
-      display: flex;
-      justify-content: center;
-    } */
-    img {
-      height: 80vh !important;
-    }
-    /* .collection{
-      width: 80vw;
-    } */
-   form{
-     position: absolute;
-     bottom: 2px;
-   }
-   #btn1{
-     margin-left: 1%;
-   }
-   #postBody {
-     font-size: 14px;
-     line-height: 24px;
-     letter-spacing: 1px;
-   }
-   .brand-logo{
-     margin-left: 1%;
-   }
-
-   /* .myContact {
-     margin-bottom: 0px;
-   } */
-
-   
-  .nav-wrapper a:hover {
-  background: #ddd;
-  color: black;
-  }
-  </style>
 </head>
 
 <body>
@@ -121,77 +40,83 @@
   </ul>
 
   <section class="popUp">
-    
-<div class="row">
-  <div class="col s12 m4">
-    <div class="card">  
-      <div class="card-image">
-        <!-- url to the image goes here -->
-        <img id="imageUrl" src="https://numpaint.com/wp-content/uploads/2020/08/yuno-gasai-future-diary-series-paint-by-numbers.jpg" alt="Image Not found">
-      </div>
-    </div>
-  </div>
-  
-  <div class="card col s12 m8">
+
     <div class="row">
-      <div class='card-content center'><h6 class="flow-text white-text" id="postType">
-        <!-- this is the post type (req/offer) and post title -->
-        Offer: Yuno Gasai
-      </h6>
-    </div>    
-      <div class="divider"></div>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <div class="card-content white-text" style="text-align: center;">
-          <p id="postBody">
-            <!-- this is where the body goes -->
-            This is my ultra-cute new yuno gasai design :) please e-mail me for price details :)
-          </p>
-        </div>
-      </div>
-    </div>
-      <div class="divider"></div>
-      <div class="row">
-        <div class="col s12">
-          <div class="card-content contact myContact white-text">
-            <p class="center">Contact Info:</p>
-            <!-- contact info goes here -->
-            <br>
-            <br>
-            <p id="contactNumber">phone number: </p>
-            <br>
-            <p id="contactEmail">email: </p>
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            <!-- url to the image goes here -->
+            <img id="imageUrl"
+              src="https://numpaint.com/wp-content/uploads/2020/08/yuno-gasai-future-diary-series-paint-by-numbers.jpg"
+              alt="Image Not found">
           </div>
         </div>
       </div>
-      <div class="divider"></div>
-      <form class="col s12">
+
+      <div class="card col s12 m8">
         <div class="row">
-          <div class="input-field col s12">
-            <textarea id="textarea1" class="materialize-textarea white-text"></textarea>
-            <label for="textarea1">Comment</label>
+          <div class='card-content center'>
+            <h6 class="flow-text white-text" id="postType">
+              <!-- this is the post type (req/offer)  -->
+              Offer
+            </h6>
           </div>
-          <button id='addComment' class="btn waves-effect waves-light black" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-          </button>
+          <div class="divider"></div>
         </div>
-      </form>
+        <div class="row">
+          <div class="col s12">
+            <div class="card-content white-text" style="text-align: center;">
+              <p id="postBody">
+                <!-- this is where the body goes -->
+                This is my ultra-cute new yuno gasai design :) please e-mail me for price details :)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col s12">
+            <div class="card-content contact myContact white-text">
+              <p class="center">Contact Info:</p>
+              <!-- contact info goes here -->
+              <br>
+              <br>
+              <p id="contactNumber">phone number: </p>
+              <br>
+              <p id="contactEmail">email: </p>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea white-text"></textarea>
+              <label for="textarea1">Comment</label>
+            </div>
+            <button id='addComment' class="btn waves-effect waves-light black" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
 
   </section>
   <section class="popUp">
 
     <div class="container">
-    <ul class="collection" id="comments">
-      <li class="collection-item #212121 grey darken-4 white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus reiciendis nisi
-        laboriosam dolores eligendi qui commodi. Consequatur explicabo quidem quasi sint a, quisquam illo vel ut, similique
-        consequuntur in blanditiis!</li>
-      <li class="collection-item #212121 grey darken-4 white-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores perspiciatis iusto
-        voluptatibus exercitationem sequi consequuntur fugiat pariatur ipsum quidem amet! Ad, rerum. Minus praesentium
-        adipisci vero inventore corrupti obcaecati odit?</li>
-    </ul> 
+      <ul class="collection" id="comments">
+        <li class="collection-item #212121 grey darken-4 white-text">Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Accusamus reiciendis nisi
+          laboriosam dolores eligendi qui commodi. Consequatur explicabo quidem quasi sint a, quisquam illo vel ut,
+          similique
+          consequuntur in blanditiis!</li>
+        <li class="collection-item #212121 grey darken-4 white-text">Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Maiores perspiciatis iusto
+          voluptatibus exercitationem sequi consequuntur fugiat pariatur ipsum quidem amet! Ad, rerum. Minus praesentium
+          adipisci vero inventore corrupti obcaecati odit?</li>
+      </ul>
     </div>
   </section>
 
@@ -209,7 +134,7 @@
       var instances = M.FormSelect.init(elems, options);
     })
 
-    
+
   </script>
 </body>
 
