@@ -9,7 +9,7 @@ document.getElementById('login').addEventListener('click', event => {
         localStorage.setItem('token', token)
         window.location = '/home'
       } else {
-        alert('Invalid username or password')
+        Swal.fire('Invalid username or password')
       }
     })
     .catch(err => console.error(err))
@@ -18,3 +18,4 @@ document.getElementById('login').addEventListener('click', event => {
 document.getElementById('register').addEventListener('click', event => {
   window.location = '/register'
 })
+

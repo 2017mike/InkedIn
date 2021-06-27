@@ -18,14 +18,12 @@ We need a empty div that will be populated with cards through javascript -->
   <style>
 
 
-    body {
+     body {
       font-family: 'Benne', serif;
-      background: #dbd5d5;
-      
-      
-      /* background-repeat: repeat-y; */
+      background: #222;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
+      background-repeat: no-repeat;
       background-size: cover;
-      
     }
     /* nav{
       position: fixed!important;
@@ -33,8 +31,20 @@ We need a empty div that will be populated with cards through javascript -->
       width: 100%;
       z-index: 300;
     } */
+
+    @keyframes showUp {
+      0% {
+        transform: scale(0);
+      }
+
+      100% {
+        transoform: scale(1);
+      }
+    }
+
     .container{
       z-index: -1!important;
+      animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
     }
 
     .nav-wrapper{
@@ -45,10 +55,10 @@ We need a empty div that will be populated with cards through javascript -->
     }
     .card-image{
       background-position: top!important;
-      height: 200px;
+      height: 300px;
     }
     .card{
-      height: 300px;
+      height: 410px;
     }
     .image-reveal{
       width: 100%;
@@ -63,9 +73,11 @@ We need a empty div that will be populated with cards through javascript -->
   color: black;
   }
   .viewPost {
-    align-self: center;
-    height: auto;
-    margin-bottom: 1%;
+    padding-bottom: 10px!important;
+  }
+
+  .homeDiv {
+    margin-bottom: 0px;
   }
   </style>
 </head>
@@ -92,98 +104,93 @@ We need a empty div that will be populated with cards through javascript -->
     <li id="signOutNav"><a href="">Sign Out</a></li>
   </ul>
     
-<div class="section">
+<!-- <div class="section"> -->
   <div class="row center">
-    <h1 class="section">Home</h1>
+    <h1 class="section white-text homeDiv">Home</h1>
   </div>
-</div>
+<!-- </div> -->
 
 
   <div class="container">
     <div class="row" id="renderCards">
-      <div class="col s4">
-        <div class="card">
+
+
+      <div class="col m4 s12">
+        <div class="card #424242 grey darken-3">
           <div class="card-image waves-effect">
             <img class='activator responsive-img'
               src="https://i.redd.it/8hq0hesdvsa61.jpg">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">This is a link</a></p>
+            <span class="card-title activator white-text text-darken-4">Card Title</span>
+            <a class="waves-effect waves-light btn viewPost black">view</a>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">
-              <i class="material-icons right">close</i></span>
+            <div class="card-title grey-text text-darken-4">
+              <i class="material-icons right">close</i></div>
             <img class='image-reveal responsive-img'
               src="https://i.redd.it/8hq0hesdvsa61.jpg"
               alt="">
           </div>
         </div>
       </div>
-      <div class="col s4">
-        <div class="card">
+
+      <div class="col m4 s12">
+        <div class="card #424242 grey darken-3">
           <div class="card-image waves-effect">
-            <img class='activator'
-              src="https://numpaint.com/wp-content/uploads/2020/08/yuno-gasai-future-diary-series-paint-by-numbers.jpg">
+            <img class='activator responsive-img' src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">This is a link</a></p>
+            <span class="card-title activator white-text text-darken-4">Card Title</span>
+            <a class="waves-effect waves-light btn viewPost black">view</a>
           </div>
           <div class="card-reveal">
-            <span' class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-              <img class='image-reveal'
-                src="https://numpaint.com/wp-content/uploads/2020/08/yuno-gasai-future-diary-series-paint-by-numbers.jpg"
-                alt="">
+            <div class="card-title grey-text text-darken-4">
+              <i class="material-icons right">close</i>
+            </div>
+            <img class='image-reveal responsive-img' src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
           </div>
         </div>
       </div>
-      <div class="col s4">
-        <div class="card">
-          <div class="card-image waves-effect">
-            <img class='activator'
-              src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">This is a link</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <img class='image-reveal'
-              src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="col s4">
-        <div class="card">
-          <div class="card-image waves-effect">
-            <img class='activator'
-              src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">This is a link</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <img class='image-reveal'
-              src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
-          </div>
-        </div>
-      </div>
+
+
+     
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <!-- this is where the cards get rendered -->
     </div>
   </div>
 
-  <a class="btn-floating btn-large waves-effect waves-light black right-align tooltipped " data-position="top"
+  <a class="btn-floating btn-large waves-effect waves-light #b71c1c red darken-4 right-align tooltipped " data-position="top" id="addNewPost"
     data-tooltip="Add a New Post"><i class="material-icons">add</i></a>
 
   
-
+  
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+ 
+
 
   <!-- js for rendering homepage -->
   <script src="./assets/js/homePage.js"></script>
@@ -192,10 +199,24 @@ We need a empty div that will be populated with cards through javascript -->
 
   
   <script>
+    window.onload = function () {
+      lax.init()
 
+      // Add a driver that we use to control our animations
+      lax.addDriver('scrollY', function () {
+        return window.scrollY
+      })
 
-   
-
+      // Add animation bindings to elements
+      lax.addElements('.selector', {
+        scrollY: {
+          translateX: [
+            ["elInY", "elCenterY", "elOutY"],
+            [0, 'screenWidth/2', 'screenWidth'],
+          ]
+        }
+      })
+    }
   </script>
 </body>
 
