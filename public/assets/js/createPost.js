@@ -2,12 +2,12 @@
 document.getElementById('create').addEventListener('click', event => {
   event.preventDefault()
   //get new post info
-
+  console.log(document.getElementById('type').value)
   let newPost = {
     type: document.getElementById('type').value,
-    imgUrl: document.getElementById('imgUrl').value,
-    body: document.getElementById('body').value,
-    contactEmail: document.getElementById('contactEmail').value,
+    imgUrl: document.getElementById('imageURL').value,
+    body: document.getElementById('description').value,
+    contactEmail: document.getElementById('email').value,
     contactNumber: document.getElementById('contactNumber').value 
   }
 

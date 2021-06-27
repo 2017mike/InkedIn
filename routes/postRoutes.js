@@ -31,7 +31,7 @@ router.get('/posts/:id', passport.authenticate('jwt'), (req, res) => Post.findOn
 router.post('/posts', passport.authenticate('jwt'), (req, res) => Post.create({
   //true for request, false for an offer
   type: req.body.type,
-  imgURL: req.body.imgURL,
+  imgUrl: req.body.imgUrl,
   body: req.body.body,
   contactEmail: req.body.contactEmail,
   contactNumber: req.body.contactNumber,
