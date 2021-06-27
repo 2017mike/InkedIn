@@ -1,6 +1,6 @@
 # <Project 2: InkedIn>
-### website: <a href='https://github.com/JEckfeldt/Project2Tattoo'>https://github.com/JEckfeldt/Project2Tattoo</a>
-
+### website: 
+### github: <a href='https://github.com/JEckfeldt/Project2Tattoo'>https://github.com/JEckfeldt/Project2Tattoo</a>
 ## Description:
   - Considering the endless applications available, we wanted to create a practical and useful application to everyday consumers
       
@@ -36,13 +36,16 @@
 
 - Third-party assets
  1. Sweetalert2 for the beautiful alert button on our login page.
- 2. Node Express
- 3. Dotenv
- 4. NPM
- 5. LinkedIn
- 6. Facebook
- 7. Materialize: provide the library for all the CSS we used in InkedIn
- 8. Artwork
+ 2. Node Express for framwork
+ 3. Dotenv for dotenv files
+ 4. NPM for allowing to use npm resources
+ 5. Materialize: provide the library for all the CSS we used in InkedIn
+ 6. Passport providing autentication
+ 7. JSON Webtoken providing authentication
+ 8. Sequelize for database handling
+ 9. MYSQL for dtabase
+ 10. Heroku for live deploy
+ 11. JAWSDB for database to use for live server
 
 ## License
 - This is all free and open source; and we'd like to keep it that way.
