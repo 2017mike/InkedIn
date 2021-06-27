@@ -7,67 +7,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create a Post</title>
+  <link rel="stylesheet" href="./assets/css/create.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Compiled and minified CSS -->
-  <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
 
-  <style>
-    .container {
-      outline: auto;
-      padding-top: 5%;
-      padding: 2%;
-      /* margin-top: 1%; */
-      /* background-color: black; */
-      position: static!important;
-      color: white;
-     background: #222;
-      /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
-    } 
-    
-    body {
-      font-family: 'Benne', serif;
-      background: #222;
-      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
 
-  .space{
-    height: 1vh;
-  }
-  .nav-wrapper a:hover {
-  background: #ddd;
-  color: black;
-  }
-  .row{
-    margin-bottom: 0px!important;
-  }
-  .brand-logo{
-     margin-left: 1%;
-   }
 
-   @keyframes showUp {
-      0% {
-        transform: scale(0);
-      }
-
-      100% {
-        transoform: scale(1);
-      }
-    }
-    .myContainer{
-     
-      animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
-    }
-  </style>
 </head>
 
 <body>
@@ -98,17 +48,15 @@
       <div class="col m10 offset-m1">
         <form method="GET" id='post_form'>
           <div class="row">
-          <div class="input-field col s12 validate grey">
-            <select id="type">
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">Post</option>
-              <option value="2">Request</option>
-            </select>
-            <label>Select</label>
+            <div class="input-field col s12 validate grey">
+              <select id="type">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Post</option>
+                <option value="2">Request</option>
+              </select>
+              <label>Select</label>
+            </div>
           </div>
-          </div>
-          <!-- <div class="row">
-            <div class="col s12"> -->
           <div class="row">
             <div class="input-field col s12 white-text">
               <input id="postTitle" type="text" class="validate white-text" placeholder="Please enter a brief title">
@@ -117,24 +65,20 @@
             </div>
           </div>
           <div class="row">
-            <!-- <form class="col s12"> -->
-              <!-- <div class="row"> -->
-                <div class="input-field col s12">
-                  <textarea id="imageURL" class="materialize-textarea validate white-text" placeholder="Please enter a live image URL"></textarea>
-                  <label for="textarea1"></label>
-                  <p>Image URL</p>
-                </div>
-              <!-- </div> -->
+            <div class="input-field col s12">
+              <textarea id="imageURL" class="materialize-textarea validate white-text"
+                placeholder="Please enter a live image URL"></textarea>
+              <label for="textarea1"></label>
+              <p>Image URL</p>
+            </div>
           </div>
           <div class="row">
-            <!-- <form class="col s12"> -->
-              <!-- <div class="row"> -->
-                <div class="input-field col s12">
-                  <textarea id="description" class="materialize-textarea validate white-text" placeholder="Please enter a brief description"></textarea>
-                  <label for="textarea1"></label>
-                  <p>Description</p>
-                </div>
-              <!-- </div> -->
+            <div class="input-field col s12">
+              <textarea id="description" class="materialize-textarea validate white-text"
+                placeholder="Please enter a brief description"></textarea>
+              <label for="textarea1"></label>
+              <p>Description</p>
+            </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
@@ -151,78 +95,20 @@
             </div>
           </div>
         </form>
-    
-      
+
+
         <button form='post_form' class="btn waves-effect waves-light black" type="submit" name="action">Submit</button>
       </div>
-      </div>
     </div>
+  </div>
 
-  
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- axios and materialize js  -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<!-- js for rendering homepage -->
-<script src="./assets/js/homePage.js"></script>
-<script src="./assets/js/all.js"></script>
-  <script>
-    M.AutoInit();
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('select');
-      var instances = M.FormSelect.init(elems, options);
-    });
-  //   document.getElementById('addPost').addEventListener('click', event => {
-  //     event.preventDefault()
-  //     axios.post('/api/posts', {
-
-        
-  //       headers: {
-  //         'Authorization': `Bearer ${localStorage.getItem('token')}`
-  //       }
-  //     })
-  //       .then(({ data: post }) => {
-  //         const itemElem = document.createElement('li')
-  //         itemElem.innerHTML = `
-  //     <p>Text: your post has been created! :)</p>
-  // `
-  //         document.getElementById('items').append(itemElem)
-  //       })
-  //       .catch(err => window.location = '/login.html')
-  //   })
-
-
-//   document.getElementById('addPost').addEventListener('click', event => {
-//     event.preventDefault()
-//     axios.post('/api/posts', {
-
-//       type: document.getElementById('text').value,
-//       imgURL: 
-//       body: 
-//       contactEmail:
-//       contactNumber:
-
-
-
-//     }, {
-//       headers: {
-//         'Authorization': `Bearer ${localStorage.getItem('token')}`
-//       }
-//     })
-//       .then(({ data: post }) => {
-//         const itemElem = document.createElement('li')
-//         itemElem.innerHTML = `
-//       <p>Text: your post has been created! :)</p>
-
-// `
-//         document.getElementById('items').append(itemElem)
-//       })
-//       .catch(err => window.location = '/login.html')
-//   })
-
-
-
-
-  </script>
+  <!-- js for rendering homepage -->
+  <script src="./assets/js/homePage.js"></script>
+  <script src="./assets/js/all.js"></script>
 
 </body>
 

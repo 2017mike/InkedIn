@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var instances = M.Sidenav.init(elems, options);
 });
 
+M.AutoInit();
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('select');
+  var instances = M.FormSelect.init(elems, options);
+});
+
+
+
 document.getElementById('logoButton').addEventListener('click', event => {
   window.location = '/home'
 })

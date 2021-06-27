@@ -1,5 +1,3 @@
-<!-- this is the home page, all posts will be displayed
-We need a empty div that will be populated with cards through javascript -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,75 +9,12 @@ We need a empty div that will be populated with cards through javascript -->
   <title>InkedIn -- Home</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./assets/css/home.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
-  <style>
 
-
-     body {
-      font-family: 'Benne', serif;
-      background: #222;
-      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    /* nav{
-      position: fixed!important;
-      top: 0%;
-      width: 100%;
-      z-index: 300;
-    } */
-
-    @keyframes showUp {
-      0% {
-        transform: scale(0);
-      }
-
-      100% {
-        transoform: scale(1);
-      }
-    }
-
-    .container{
-      z-index: -1!important;
-      animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
-    }
-
-    .nav-wrapper{
-      background-color: black;
-    }
-    .brand-logo{
-      margin-left: 1%;
-    }
-    .card-image{
-      background-position: top!important;
-      height: 300px;
-    }
-    .card{
-      height: 410px;
-    }
-    .image-reveal{
-      width: 100%;
-    }
-    .btn-floating {
-      position: fixed;
-      right: 20px;
-      bottom: 10px;
-    }
-    .nav-wrapper a:hover {
-  background: #ddd;
-  color: black;
-  }
-  .viewPost {
-    padding-bottom: 10px!important;
-  }
-
-  .homeDiv {
-    margin-bottom: 0px;
-  }
-  </style>
 </head>
 
 <body>
@@ -103,14 +38,11 @@ We need a empty div that will be populated with cards through javascript -->
     <li id="aboutPageNav"><a href="">About</a></li>
     <li id="signOutNav"><a href="">Sign Out</a></li>
   </ul>
-    
-<!-- <div class="section"> -->
+
   <div class="row center">
     <h1 class="section white-text homeDiv">Home</h1>
   </div>
-<!-- </div> -->
-
-
+  
   <div class="container">
     <div class="row" id="renderCards">
 
@@ -118,27 +50,7 @@ We need a empty div that will be populated with cards through javascript -->
       <div class="col m4 s12">
         <div class="card #424242 grey darken-3">
           <div class="card-image waves-effect">
-            <img class='activator responsive-img'
-              src="https://i.redd.it/8hq0hesdvsa61.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator white-text text-darken-4">Card Title</span>
-            <a class="waves-effect waves-light btn viewPost black">view</a>
-          </div>
-          <div class="card-reveal">
-            <div class="card-title grey-text text-darken-4">
-              <i class="material-icons right">close</i></div>
-            <img class='image-reveal responsive-img'
-              src="https://i.redd.it/8hq0hesdvsa61.jpg"
-              alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="col m4 s12">
-        <div class="card #424242 grey darken-3">
-          <div class="card-image waves-effect">
-            <img class='activator responsive-img' src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
+            <img class='activator responsive-img' src="https://i.redd.it/8hq0hesdvsa61.jpg">
           </div>
           <div class="card-content">
             <span class="card-title activator white-text text-darken-4">Card Title</span>
@@ -148,76 +60,43 @@ We need a empty div that will be populated with cards through javascript -->
             <div class="card-title grey-text text-darken-4">
               <i class="material-icons right">close</i>
             </div>
-            <img class='image-reveal responsive-img' src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
+            <img class='image-reveal responsive-img' src="https://i.redd.it/8hq0hesdvsa61.jpg" alt="">
           </div>
         </div>
       </div>
 
-
-     
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div class="col m4 s12">
+        <div class="card #424242 grey darken-3">
+          <div class="card-image waves-effect">
+            <img class='activator responsive-img'
+              src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator white-text text-darken-4">Card Title</span>
+            <a class="waves-effect waves-light btn viewPost black">view</a>
+          </div>
+          <div class="card-reveal">
+            <div class="card-title grey-text text-darken-4">
+              <i class="material-icons right">close</i>
+            </div>
+            <img class='image-reveal responsive-img'
+              src="https://ih1.redbubble.net/image.219451024.0892/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="">
+          </div>
+        </div>
+      </div>
       <!-- this is where the cards get rendered -->
     </div>
   </div>
 
-  <a class="btn-floating btn-large waves-effect waves-light #b71c1c red darken-4 right-align tooltipped " data-position="top" id="addNewPost"
-    data-tooltip="Add a New Post"><i class="material-icons">add</i></a>
-
-  
-  
-
+  <a class="btn-floating btn-large waves-effect waves-light #b71c1c red darken-4 right-align tooltipped "
+    data-position="top" id="addNewPost" data-tooltip="Add a New Post"><i class="material-icons">add</i></a>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
- 
-
-
   <!-- js for rendering homepage -->
   <script src="./assets/js/homePage.js"></script>
   <script src="./assets/js/all.js"></script>
 
-
-  
-  <script>
-    window.onload = function () {
-      lax.init()
-
-      // Add a driver that we use to control our animations
-      lax.addDriver('scrollY', function () {
-        return window.scrollY
-      })
-
-      // Add animation bindings to elements
-      lax.addElements('.selector', {
-        scrollY: {
-          translateX: [
-            ["elInY", "elCenterY", "elOutY"],
-            [0, 'screenWidth/2', 'screenWidth'],
-          ]
-        }
-      })
-    }
-  </script>
 </body>
 
 </html>

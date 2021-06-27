@@ -1,0 +1,70 @@
+ body {
+   font-family: 'Benne', serif;
+   background: #222;
+   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1513628253939-010e64ac66cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+ @keyframes showUp {
+   0% {
+     transform: scale(0);
+   }
+   100% {
+     transoform: scale(1);
+   }
+ }
+
+ .popUp {
+   animation: showUp 0.5s cubic-bezier(0.18, 1.3, 1, 1) forwards;
+ }
+
+ .row {
+   background: #222;
+ }
+
+ .col {
+   background: #222;
+ }
+
+ .collection-item {
+   color: #222;
+ }
+
+ .card {
+   height: 80vh !important;
+   width: auto;
+  
+ }
+
+ 
+
+ img {
+   height: 80vh !important;
+ }
+
+ 
+ form {
+   position: absolute;
+   bottom: 2px;
+ }
+
+ #btn1 {
+   margin-left: 1%;
+ }
+
+ #postBody {
+   font-size: 14px;
+   line-height: 24px;
+   letter-spacing: 1px;
+ }
+
+ .brand-logo {
+   margin-left: 1%;
+ }
+
+ 
+ .nav-wrapper a:hover {
+   background: #ddd;
+   color: black;
+ }
