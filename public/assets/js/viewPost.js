@@ -8,7 +8,7 @@ axios.get(`/api/posts/${postId}`, {
   }
 })
 .then(({ data }) => {
-  // console.log(data)
+  console.log(data)
   //get req or offer
   let postType = 'Offer'
   if(data.type) {

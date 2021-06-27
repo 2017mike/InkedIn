@@ -51,17 +51,10 @@
             <div class="input-field col s12 validate grey">
               <select id="type">
                 <option value="" disabled selected>Choose your option</option>
-                <option value="1">Post</option>
-                <option value="2">Request</option>
+                <option value="0">Post</option>
+                <option value="1">Request</option>
               </select>
               <label>Select</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 white-text">
-              <input id="postTitle" type="text" class="validate white-text" placeholder="Please enter a brief title" style="font-size: 2vh;">
-              <label for="postTitle"></label>
-              <p>Title</p>
             </div>
           </div>
           <div class="row">
@@ -97,7 +90,7 @@
         </form>
 
 
-        <button form='post_form' class="btn waves-effect waves-light black" type="submit" name="action">Submit</button>
+        <button form='post_form' class="btn waves-effect waves-light black" type="submit" name="action" id="create">Submit</button>
       </div>
     </div>
   </div>
@@ -109,6 +102,7 @@
   <!-- js for rendering homepage -->
   <script src="./assets/js/homePage.js"></script>
   <script src="./assets/js/all.js"></script>
+  <script src="./assets/js/createPost.js"></script>
 
 </body>
 
