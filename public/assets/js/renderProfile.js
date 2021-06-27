@@ -7,27 +7,28 @@ const renderProfile = () => {
   })
   .then(({ data }) => {
     console.log(data)
-    let postType = 'Offer'
+    let postType = ''
     data.forEach(post => {
-      if (data.type) {
-        postType = 'Request'
-      }
+      postType = post.type ? 'Request' : 'Offer'
       //grab each post and render it to page
       document.getElementById('profileCards').innerHTML += `
-      <div class="col s12 m4">
+      <div class="col m4 s12">
         <div class="card #424242 grey darken-3">
           <div class="card-image waves-effect">
-            <img class='activator responsive-img' src="${post.imgUrl}" alt="image not found">
+            <img class='activator responsive-img'
+              src=${post.imgUrl}>
           </div>
-          <div class="card-content">
+          <div class="card-content center-align">
             <span class="card-title activator white-text text-darken-4">${postType}</span>
-            <a class="waves-effect waves-light btn viewPost black" data-id=${post.id}>view</a>
+            <a class="waves-effect waves-light btn viewPost black">View</a>
+            <a class="waves-effect waves-light btn deletePost red" data-id=${post.id}>Delete</a>
           </div>
           <div class="card-reveal">
             <div class="card-title grey-text text-darken-4">
-            <i class="material-icons right">close</i>
+              <i class="material-icons right">close</i>
             </div>
-            <img class='image-reveal responsive-img' src="${post.imgUrl}" alt="image not found">
+            <img class='image-reveal responsive-img'
+              src=${post.imgUrl} alt="">
           </div>
         </div>
       </div>
@@ -39,3 +40,16 @@ const renderProfile = () => {
 }
 
 renderProfile()
+
+//delete post
+document.addEventListener('click', event => {
+  if(event.target.classList.contains('deletePost')) {
+    axios.delete(`/api/posts/${event.target.dataset.id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+  }
+})

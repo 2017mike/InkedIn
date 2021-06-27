@@ -22,7 +22,7 @@ axios.get(`/api/posts/${postId}`, {
     //render the comment onto the page
   data.comments.forEach(comment => {
     document.getElementById('comments').innerHTML += `
-    <li class="collection-item #212121 grey darken-4 white-text">${localStorage.getItem('recentComment')}: ${comment.body}</li>
+    <li class="collection-item #212121 grey darken-4 white-text">${comment.body}</li>
     `
   })
 
@@ -42,8 +42,7 @@ document.getElementById('addComment').addEventListener('click', event => {
     }
   })
   .then(({data}) => {
-    // console.log(data)
-    localStorage.setItem('recentComment', JSON.stringify(data))
+    console.log(data)
     document.getElementById('commentField').value = ''
     window.location = '/post'
   }) 
