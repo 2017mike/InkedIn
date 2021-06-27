@@ -7,11 +7,7 @@ const renderCards = () => {
   .then(({ data }) => {
     let postType = ''
     data.forEach(post => {
-      if(post.type == true) {
-        postType = 'Request'
-      } else {
-        postType = 'Offer'
-      }
+      postType = post.type ? 'Request' : 'Offer'
       //grab each post and render it to page
       document.getElementById('renderCards').innerHTML += `
       <div class="col s12 m4">
