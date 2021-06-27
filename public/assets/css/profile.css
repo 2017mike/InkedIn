@@ -49,3 +49,6 @@ body {
 .active {
   background-color: cornflowerblue!important;
 }
+.space{
+  width: 10px!important;
+}

@@ -18,7 +18,7 @@ const renderCards = () => {
           <div class="card-image waves-effect">
             <img class='activator responsive-img' src="${post.imgUrl}" alt="image not found">
           </div>
-          <div class="card-content">
+          <div class="card-content center-align">
             <span class="card-title activator white-text text-darken-4">${postType}</span>
             <a class="waves-effect waves-light btn viewPost black">view</a>
           </div>
