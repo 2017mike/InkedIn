@@ -8,7 +8,7 @@ const renderCards = () => {
     // console.log(data)
     let postType = 'Offer'
     data.forEach(post => {
-      if(postType) {
+      if(data.type) {
         postType = 'Request'
       }
       //grab each post and render it to page
@@ -20,7 +20,7 @@ const renderCards = () => {
           </div>
           <div class="card-content">
             <span class="card-title activator grey-text text-darken-4">${postType}</span>
-            <a class="waves-effect waves-light btn viewPost">view Post</a>
+            <a class="waves-effect waves-light btn viewPost" data-id=${post.id}>view Post</a>
           </div>
           <div class="card-reveal">
             <span' class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
@@ -44,6 +44,7 @@ document.addEventListener('click', event => {
     window.location = '/post'
   }
 })
+
 
 renderCards()
 

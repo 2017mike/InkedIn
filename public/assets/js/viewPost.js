@@ -9,6 +9,16 @@ axios.get(`/api/posts/${postId}`, {
 })
 .then(({ data }) => {
   // console.log(data)
-  //fill in the datafields with post data
+  //get req or offer
+  let postType = 'Offer'
+  if(data.type) {
+    postType = 'Request'
+  }
+  //render post
+  document.getElementById('imageUrl').src = data.imgUrl
+  document.getElementById('postType').innerHTML = postType
+  document.getElementById('postBody').innerHTML = data.body
+  document.getElementById('contactNumber').innerHTML = 'Phone Number: ' + data.contactNumber
+  document.getElementById('contactEmail').innerHTML = 'Email: ' + data.contactEmail
 })
 .catch(err => console.log(err))
