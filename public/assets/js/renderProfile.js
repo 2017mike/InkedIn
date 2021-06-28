@@ -20,7 +20,7 @@ const renderProfile = () => {
           </div>
           <div class="card-content center-align">
             <span class="card-title activator white-text text-darken-4">${postType}</span>
-            <a class="waves-effect waves-light btn viewPost black">View</a>
+            <a class="waves-effect waves-light btn viewPost black" data-id=${post.id}>View</a>
             <a class="waves-effect waves-light btn deletePost red" data-id=${post.id}>Delete</a>
           </div>
           <div class="card-reveal">
@@ -51,5 +51,15 @@ document.addEventListener('click', event => {
     })
     .then(res => console.log(res))
     .catch(err => console.log(err))
+  }
+})
+
+//listener to view post
+document.addEventListener('click', event => {
+  event.preventDefault()
+  if (event.target.classList.contains('viewPost')) {
+    //grab post id set it to local storage then go to post page
+    localStorage.setItem('postId', event.target.dataset.id)
+    window.location = '/post'
   }
 })
