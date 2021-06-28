@@ -52,6 +52,7 @@ document.addEventListener('click', event => {
     .then(res => console.log(res))
     .catch(err => console.log(err))
   }
+  location.reload()
 })
 
 //listener to view post
