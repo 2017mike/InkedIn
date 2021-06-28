@@ -49,10 +49,12 @@ document.addEventListener('click', event => {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     })
-    .then(res => console.log(res))
+    .then(res => {
+      console.log(res)
+      location.reload()
+    })
     .catch(err => console.log(err))
   }
-  location.reload()
 })
 
 //listener to view post
