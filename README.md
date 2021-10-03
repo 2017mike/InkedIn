@@ -4,15 +4,15 @@
 ## Description:
   - Considering the endless applications available, we wanted to create a practical and useful application to everyday consumers
       
-  - Tatoos have been incoprorated in many different cultures and their views on it whether good or bad have been integrated in many different lives. 
+  - Tattoos have been incoprorated in many different cultures and their views on it whether good or bad have been integrated in many different lives. 
       
-  - We provide a resource that allows you to enter into a community where people can either request or post what they would like for tatoos or tatoo artwork.
+  - We provide a resource that allows you to enter into a community where people can either request or post what they would like for tattoos or tattoo artwork.
       
   - Using JavaScript, HTML, and CSS, our application is filled with functions and styling while being user friendly and reliable to use throughout many platforms
 
-- The InkedIn app allows users to join a community that provides tatoo artworks or tatoos through posts which includes: 
-  1. An image of the tatoo or tatoo artwork
-  2. Description of the tatoo or request or post
+- The InkedIn app allows users to join a community that provides tattoo artworks or tattoos through posts which includes: 
+  1. An image of the tattoo or tattoo artwork
+  2. Description of the tattoo or request or post
   3. Contact information
   4. Comments 
   
@@ -30,7 +30,7 @@
 - [Features](#Features)
 
 ## Credits
-- Michael Schwarf
+- Michael Scharf
 - Jake Eckfeldt
 - Sle Ahn
 
